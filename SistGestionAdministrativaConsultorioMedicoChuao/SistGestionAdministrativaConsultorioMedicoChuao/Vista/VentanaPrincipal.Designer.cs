@@ -156,6 +156,7 @@
             this.B_Pagos.Size = new System.Drawing.Size(272, 231);
             this.B_Pagos.TabIndex = 8;
             this.B_Pagos.UseVisualStyleBackColor = false;
+            this.B_Pagos.Click += new System.EventHandler(this.B_Pagos_Click);
             // 
             // B_Mensajes
             // 
@@ -202,6 +203,7 @@
             this.B_ListaEspera.Size = new System.Drawing.Size(245, 229);
             this.B_ListaEspera.TabIndex = 5;
             this.B_ListaEspera.UseVisualStyleBackColor = false;
+            this.B_ListaEspera.Click += new System.EventHandler(this.B_ListaEspera_Click);
             // 
             // B_Inscripcion
             // 
@@ -233,6 +235,7 @@
             this.B_BuscarPaciente.Size = new System.Drawing.Size(203, 202);
             this.B_BuscarPaciente.TabIndex = 3;
             this.B_BuscarPaciente.UseVisualStyleBackColor = true;
+            this.B_BuscarPaciente.Click += new System.EventHandler(this.B_BuscarPaciente_Click);
             // 
             // B_Inventario
             // 

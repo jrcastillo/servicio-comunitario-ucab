@@ -33,5 +33,20 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao
             this.Hide();  
         }
 
+        private void B_ListaEspera_Click(object sender, EventArgs e)
+        {
+            Utilitaria.Utilitaria.agregarValorIdentificadorOpcion(3);
+        }
+
+        private void B_BuscarPaciente_Click(object sender, EventArgs e)
+        {
+            Utilitaria.Utilitaria.agregarValorIdentificadorOpcion(2);
+        }
+
+        private void B_Pagos_Click(object sender, EventArgs e)
+        {
+            Utilitaria.Utilitaria.agregarValorIdentificadorOpcion(6);
+        }
+
     }
 }

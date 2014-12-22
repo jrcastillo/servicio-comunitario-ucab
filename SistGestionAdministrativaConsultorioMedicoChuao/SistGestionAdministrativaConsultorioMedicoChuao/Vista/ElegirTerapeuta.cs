@@ -37,11 +37,28 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
             {
                 Utilitaria.Utilitaria.agregarValorIdentificadorTerapeuta(Convert.ToInt32(DGV_ElegirTerapeuta.Rows[e.RowIndex].Cells[2].Value.ToString()));
                 MessageBox.Show(Utilitaria.Utilitaria.identificadorTerapeuta.ToString());
+
+                    if (Utilitaria.Utilitaria.identificadorOpcion == 2)
+                    { 
+                    }
+
+                    if (Utilitaria.Utilitaria.identificadorOpcion == 3)
+                    {
+                    }
+
+                    if (Utilitaria.Utilitaria.identificadorOpcion == 4)
+                    {
+                    }
+
                     if (Utilitaria.Utilitaria.identificadorOpcion == 5)
                     {
                         SistGestionAdministrativaConsultorioMedicoChuao.Vista.PrincipalMensajes nuevaVentana = new SistGestionAdministrativaConsultorioMedicoChuao.Vista.PrincipalMensajes();
                         nuevaVentana.Show();
                         this.Close();
+                    }
+
+                    if (Utilitaria.Utilitaria.identificadorOpcion == 6)
+                    { 
                     }
             }
         }
