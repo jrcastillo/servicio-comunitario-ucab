@@ -18,6 +18,7 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
         {
             InitializeComponent();
             datosTerapeutas(); // Función en la que consigo los datos de los terapeutas       
+            //MessageBox.Show(Utilitaria.Utilitaria.identificadorOpcion.ToString());//BOOOOORRRAARRRRRRRR AL TERMINARR
         }
 
         private void B_Cancelar_Click(object sender, EventArgs e)

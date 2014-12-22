@@ -36,16 +36,25 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao
         private void B_ListaEspera_Click(object sender, EventArgs e)
         {
             Utilitaria.Utilitaria.agregarValorIdentificadorOpcion(3);
+            SistGestionAdministrativaConsultorioMedicoChuao.Vista.ElegirTerapeuta nuevaVentana = new SistGestionAdministrativaConsultorioMedicoChuao.Vista.ElegirTerapeuta();
+            nuevaVentana.Show();
+            this.Hide();  
         }
 
         private void B_BuscarPaciente_Click(object sender, EventArgs e)
         {
             Utilitaria.Utilitaria.agregarValorIdentificadorOpcion(2);
+            SistGestionAdministrativaConsultorioMedicoChuao.Vista.ElegirTerapeuta nuevaVentana = new SistGestionAdministrativaConsultorioMedicoChuao.Vista.ElegirTerapeuta();
+            nuevaVentana.Show();
+            this.Hide();  
         }
 
         private void B_Pagos_Click(object sender, EventArgs e)
         {
             Utilitaria.Utilitaria.agregarValorIdentificadorOpcion(6);
+            SistGestionAdministrativaConsultorioMedicoChuao.Vista.ElegirTerapeuta nuevaVentana = new SistGestionAdministrativaConsultorioMedicoChuao.Vista.ElegirTerapeuta();
+            nuevaVentana.Show();
+            this.Hide();  
         }
 
     }
