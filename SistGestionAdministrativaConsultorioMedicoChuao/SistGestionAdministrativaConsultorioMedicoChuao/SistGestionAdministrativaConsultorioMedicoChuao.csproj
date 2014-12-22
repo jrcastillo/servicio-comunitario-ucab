@@ -32,6 +32,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="mono.security, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\mono.security.dll</HintPath>
+    </Reference>
+    <Reference Include="npgsql, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\npgsql.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,6 +52,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Utilitaria\ConexionBD.cs" />
+    <Compile Include="Utilitaria\Utilitaria.cs" />
+    <Compile Include="Vista\ElegirTerapeuta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ElegirTerapeuta.Designer.cs">
+      <DependentUpon>ElegirTerapeuta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\PrincipalMensajes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\PrincipalMensajes.Designer.cs">
+      <DependentUpon>PrincipalMensajes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\VentanaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +84,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Vista\ElegirTerapeuta.resx">
+      <DependentUpon>ElegirTerapeuta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\VentanaPrincipal.resx">
       <DependentUpon>VentanaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -91,12 +116,12 @@
     <None Include="Resources\Pagos.png" />
     <None Include="Resources\Mensajes.png" />
     <None Include="Resources\Horario.png" />
+    <None Include="Resources\Aceptar.png" />
+    <None Include="Resources\Cancelar.png" />
     <Content Include="Resources\Inscripcion.png" />
     <None Include="Resources\ListaEspera.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Utilitaria\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

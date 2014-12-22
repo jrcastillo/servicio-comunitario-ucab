@@ -15,11 +15,22 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao
         public VentanaPrincipal()
         {
             InitializeComponent();
+            Utilitaria.Utilitaria.reiniciarIdentificadorOpcion();
         }
 
         private void B_Salir_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult resultado = MessageBox.Show("¿Seguro que desea salir del sistema?", "Advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (resultado == DialogResult.OK)
+            Application.Exit();
+        }
+
+        private void B_Mensajes_Click(object sender, EventArgs e)
+        {
+            Utilitaria.Utilitaria.agregarValorIdentificadorOpcion(5);
+            SistGestionAdministrativaConsultorioMedicoChuao.Vista.ElegirTerapeuta nuevaVentana = new SistGestionAdministrativaConsultorioMedicoChuao.Vista.ElegirTerapeuta();
+            nuevaVentana.Show();
+            this.Hide();  
         }
 
     }

@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.L_MenuPrincipal = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.L_Inscripcion = new System.Windows.Forms.Label();
+            this.L_BuscarPaciente = new System.Windows.Forms.Label();
+            this.L_ListaEspera = new System.Windows.Forms.Label();
+            this.L_Horarios = new System.Windows.Forms.Label();
+            this.L_Mensajes = new System.Windows.Forms.Label();
+            this.L_PagosServicios = new System.Windows.Forms.Label();
+            this.L_Inventario = new System.Windows.Forms.Label();
+            this.L_SalirSistema = new System.Windows.Forms.Label();
             this.B_Pagos = new System.Windows.Forms.Button();
             this.B_Mensajes = new System.Windows.Forms.Button();
             this.B_Horarios = new System.Windows.Forms.Button();
@@ -52,100 +52,101 @@
             this.L_MenuPrincipal.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.L_MenuPrincipal.AutoSize = true;
             this.L_MenuPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.L_MenuPrincipal.Font = new System.Drawing.Font("Harlow Solid Italic", 56.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_MenuPrincipal.Font = new System.Drawing.Font("Bauhaus 93", 56.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.L_MenuPrincipal.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.L_MenuPrincipal.Location = new System.Drawing.Point(372, 9);
+            this.L_MenuPrincipal.Location = new System.Drawing.Point(362, 10);
             this.L_MenuPrincipal.Name = "L_MenuPrincipal";
-            this.L_MenuPrincipal.Size = new System.Drawing.Size(544, 95);
+            this.L_MenuPrincipal.Size = new System.Drawing.Size(555, 84);
             this.L_MenuPrincipal.TabIndex = 1;
             this.L_MenuPrincipal.Text = "Menú Principal";
             this.L_MenuPrincipal.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // label1
+            // L_Inscripcion
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calisto MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(81, 363);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(154, 24);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "INSCRIPCIÓN";
+            this.L_Inscripcion.AutoSize = true;
+            this.L_Inscripcion.Font = new System.Drawing.Font("Calisto MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_Inscripcion.Location = new System.Drawing.Point(81, 363);
+            this.L_Inscripcion.Name = "L_Inscripcion";
+            this.L_Inscripcion.Size = new System.Drawing.Size(154, 24);
+            this.L_Inscripcion.TabIndex = 9;
+            this.L_Inscripcion.Text = "INSCRIPCIÓN";
             // 
-            // label2
+            // L_BuscarPaciente
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calisto MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(384, 363);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(210, 24);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "BUSCAR PACIENTE";
+            this.L_BuscarPaciente.AutoSize = true;
+            this.L_BuscarPaciente.Font = new System.Drawing.Font("Calisto MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_BuscarPaciente.Location = new System.Drawing.Point(384, 363);
+            this.L_BuscarPaciente.Name = "L_BuscarPaciente";
+            this.L_BuscarPaciente.Size = new System.Drawing.Size(210, 24);
+            this.L_BuscarPaciente.TabIndex = 10;
+            this.L_BuscarPaciente.Text = "BUSCAR PACIENTE";
             // 
-            // label3
+            // L_ListaEspera
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calisto MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(678, 363);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(192, 24);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "LISTA DE ESPERA";
+            this.L_ListaEspera.AutoSize = true;
+            this.L_ListaEspera.Font = new System.Drawing.Font("Calisto MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_ListaEspera.Location = new System.Drawing.Point(678, 363);
+            this.L_ListaEspera.Name = "L_ListaEspera";
+            this.L_ListaEspera.Size = new System.Drawing.Size(192, 24);
+            this.L_ListaEspera.TabIndex = 11;
+            this.L_ListaEspera.Text = "LISTA DE ESPERA";
             // 
-            // label4
+            // L_Horarios
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calisto MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1017, 363);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(125, 24);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "HORARIOS";
+            this.L_Horarios.AutoSize = true;
+            this.L_Horarios.Font = new System.Drawing.Font("Calisto MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_Horarios.Location = new System.Drawing.Point(1017, 363);
+            this.L_Horarios.Name = "L_Horarios";
+            this.L_Horarios.Size = new System.Drawing.Size(125, 24);
+            this.L_Horarios.TabIndex = 12;
+            this.L_Horarios.Text = "HORARIOS";
             // 
-            // label5
+            // L_Mensajes
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calisto MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(86, 638);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(123, 24);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "MENSAJES";
+            this.L_Mensajes.AutoSize = true;
+            this.L_Mensajes.Font = new System.Drawing.Font("Calisto MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_Mensajes.Location = new System.Drawing.Point(86, 638);
+            this.L_Mensajes.Name = "L_Mensajes";
+            this.L_Mensajes.Size = new System.Drawing.Size(123, 24);
+            this.L_Mensajes.TabIndex = 13;
+            this.L_Mensajes.Text = "MENSAJES";
             // 
-            // label6
+            // L_PagosServicios
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calisto MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(382, 638);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(212, 24);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "PAGOS/SERVICIOS";
+            this.L_PagosServicios.AutoSize = true;
+            this.L_PagosServicios.Font = new System.Drawing.Font("Calisto MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_PagosServicios.Location = new System.Drawing.Point(382, 638);
+            this.L_PagosServicios.Name = "L_PagosServicios";
+            this.L_PagosServicios.Size = new System.Drawing.Size(212, 24);
+            this.L_PagosServicios.TabIndex = 14;
+            this.L_PagosServicios.Text = "PAGOS/SERVICIOS";
             // 
-            // label7
+            // L_Inventario
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Calisto MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(697, 638);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(146, 24);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "INVENTARIO";
+            this.L_Inventario.AutoSize = true;
+            this.L_Inventario.Font = new System.Drawing.Font("Calisto MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_Inventario.Location = new System.Drawing.Point(697, 638);
+            this.L_Inventario.Name = "L_Inventario";
+            this.L_Inventario.Size = new System.Drawing.Size(146, 24);
+            this.L_Inventario.TabIndex = 15;
+            this.L_Inventario.Text = "INVENTARIO";
             // 
-            // label8
+            // L_SalirSistema
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Calisto MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(968, 638);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(218, 24);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "SALIR DEL SISTEMA";
+            this.L_SalirSistema.AutoSize = true;
+            this.L_SalirSistema.Font = new System.Drawing.Font("Calisto MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_SalirSistema.Location = new System.Drawing.Point(968, 638);
+            this.L_SalirSistema.Name = "L_SalirSistema";
+            this.L_SalirSistema.Size = new System.Drawing.Size(218, 24);
+            this.L_SalirSistema.TabIndex = 16;
+            this.L_SalirSistema.Text = "SALIR DEL SISTEMA";
             // 
             // B_Pagos
             // 
             this.B_Pagos.BackColor = System.Drawing.Color.Transparent;
             this.B_Pagos.BackgroundImage = global::SistGestionAdministrativaConsultorioMedicoChuao.Properties.Resources.Pagos;
             this.B_Pagos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.B_Pagos.FlatAppearance.BorderColor = System.Drawing.Color.MediumTurquoise;
             this.B_Pagos.FlatAppearance.BorderSize = 0;
             this.B_Pagos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.B_Pagos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -160,6 +161,7 @@
             // 
             this.B_Mensajes.BackColor = System.Drawing.Color.Transparent;
             this.B_Mensajes.BackgroundImage = global::SistGestionAdministrativaConsultorioMedicoChuao.Properties.Resources.Mensajes;
+            this.B_Mensajes.FlatAppearance.BorderColor = System.Drawing.Color.MediumTurquoise;
             this.B_Mensajes.FlatAppearance.BorderSize = 0;
             this.B_Mensajes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.B_Mensajes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -169,10 +171,12 @@
             this.B_Mensajes.Size = new System.Drawing.Size(237, 234);
             this.B_Mensajes.TabIndex = 7;
             this.B_Mensajes.UseVisualStyleBackColor = false;
+            this.B_Mensajes.Click += new System.EventHandler(this.B_Mensajes_Click);
             // 
             // B_Horarios
             // 
             this.B_Horarios.BackgroundImage = global::SistGestionAdministrativaConsultorioMedicoChuao.Properties.Resources.Horario;
+            this.B_Horarios.FlatAppearance.BorderColor = System.Drawing.Color.MediumTurquoise;
             this.B_Horarios.FlatAppearance.BorderSize = 0;
             this.B_Horarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.B_Horarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -187,6 +191,7 @@
             // 
             this.B_ListaEspera.BackColor = System.Drawing.Color.Transparent;
             this.B_ListaEspera.BackgroundImage = global::SistGestionAdministrativaConsultorioMedicoChuao.Properties.Resources.ListaEspera;
+            this.B_ListaEspera.FlatAppearance.BorderColor = System.Drawing.Color.MediumTurquoise;
             this.B_ListaEspera.FlatAppearance.BorderSize = 0;
             this.B_ListaEspera.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.B_ListaEspera.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -202,6 +207,7 @@
             // 
             this.B_Inscripcion.BackColor = System.Drawing.Color.Transparent;
             this.B_Inscripcion.BackgroundImage = global::SistGestionAdministrativaConsultorioMedicoChuao.Properties.Resources.Inscripcion;
+            this.B_Inscripcion.FlatAppearance.BorderColor = System.Drawing.Color.MediumTurquoise;
             this.B_Inscripcion.FlatAppearance.BorderSize = 0;
             this.B_Inscripcion.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.B_Inscripcion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -216,6 +222,7 @@
             // B_BuscarPaciente
             // 
             this.B_BuscarPaciente.BackgroundImage = global::SistGestionAdministrativaConsultorioMedicoChuao.Properties.Resources.BusquedaPaciente;
+            this.B_BuscarPaciente.FlatAppearance.BorderColor = System.Drawing.Color.MediumTurquoise;
             this.B_BuscarPaciente.FlatAppearance.BorderSize = 0;
             this.B_BuscarPaciente.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.B_BuscarPaciente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -233,6 +240,7 @@
             this.B_Inventario.BackgroundImage = global::SistGestionAdministrativaConsultorioMedicoChuao.Properties.Resources.Inventario;
             this.B_Inventario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.B_Inventario.CausesValidation = false;
+            this.B_Inventario.FlatAppearance.BorderColor = System.Drawing.Color.MediumTurquoise;
             this.B_Inventario.FlatAppearance.BorderSize = 0;
             this.B_Inventario.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.B_Inventario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -249,6 +257,7 @@
             this.B_Salir.BackColor = System.Drawing.Color.Transparent;
             this.B_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.B_Salir.CausesValidation = false;
+            this.B_Salir.FlatAppearance.BorderColor = System.Drawing.Color.MediumTurquoise;
             this.B_Salir.FlatAppearance.BorderSize = 0;
             this.B_Salir.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.B_Salir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -271,14 +280,14 @@
             this.BackColor = System.Drawing.Color.MediumTurquoise;
             this.ClientSize = new System.Drawing.Size(1284, 681);
             this.ControlBox = false;
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.L_SalirSistema);
+            this.Controls.Add(this.L_Inventario);
+            this.Controls.Add(this.L_PagosServicios);
+            this.Controls.Add(this.L_Mensajes);
+            this.Controls.Add(this.L_Horarios);
+            this.Controls.Add(this.L_ListaEspera);
+            this.Controls.Add(this.L_BuscarPaciente);
+            this.Controls.Add(this.L_Inscripcion);
             this.Controls.Add(this.B_Pagos);
             this.Controls.Add(this.B_Mensajes);
             this.Controls.Add(this.B_Horarios);
@@ -309,14 +318,14 @@
         private System.Windows.Forms.Button B_Horarios;
         private System.Windows.Forms.Button B_Mensajes;
         private System.Windows.Forms.Button B_Pagos;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label L_Inscripcion;
+        private System.Windows.Forms.Label L_BuscarPaciente;
+        private System.Windows.Forms.Label L_ListaEspera;
+        private System.Windows.Forms.Label L_Horarios;
+        private System.Windows.Forms.Label L_Mensajes;
+        private System.Windows.Forms.Label L_PagosServicios;
+        private System.Windows.Forms.Label L_Inventario;
+        private System.Windows.Forms.Label L_SalirSistema;
     }
 }
 
