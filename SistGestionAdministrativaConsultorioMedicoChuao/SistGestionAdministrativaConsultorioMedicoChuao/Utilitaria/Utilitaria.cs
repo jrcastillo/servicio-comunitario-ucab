@@ -13,8 +13,8 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Utilitaria
         public static int identificadorTerapeuta = 0;
         public static string consultaTerapeutas = "select nombre ||', '|| apellido ||' ('|| cargo ||')' as Persona, id as Identificador from \"Terapeuta\" order by Persona;";
         public static string consultaMensajes(int IdTerapeuta) 
-        { 
-            return "select titulo as Titulo, id as IdMensaje from \"Mensaje\" where fk_terapeuta="+IdTerapeuta+" order by Titulo;"; 
+        {
+            return "select titulo as Titulo, id as IdMensaje, to_char(\"fechaCreacion\",'dd/mm/yyyy') as Fecha from \"Mensaje\" where fk_terapeuta=" + IdTerapeuta + " order by Fecha;"; 
         }
        
         public static void reiniciarIdentificadorOpcion() 

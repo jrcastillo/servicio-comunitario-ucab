@@ -48,7 +48,7 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
                 datosMensajes.Fill(datosObtenidos); // Volcado de los datos en el almacen de datos
                 for (int i = 0; i < datosObtenidos.Tables[0].Rows.Count; i++)
                 {
-                    DGV_Mensajes.Rows.Add(datosObtenidos.Tables[0].Rows[i][0], "OK", datosObtenidos.Tables[0].Rows[i][1]); // Mostrar los datos en el dgv, en la colunma 2 se guardara de manera oculta el id del terapeuta 
+                    DGV_Mensajes.Rows.Add(datosObtenidos.Tables[0].Rows[i][2], datosObtenidos.Tables[0].Rows[i][0], "OK", datosObtenidos.Tables[0].Rows[i][1]); // Mostrar los datos en el dgv, en la colunma 2 se guardara de manera oculta el id del terapeuta 
                 }
                 Utilitaria.ConexionBD.conectarBD().Close(); //Cierro conexión
             }
