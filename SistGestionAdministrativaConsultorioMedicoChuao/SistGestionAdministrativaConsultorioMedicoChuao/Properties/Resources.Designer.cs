@@ -133,6 +133,16 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap MensajeNuevo {
+            get {
+                object obj = ResourceManager.GetObject("MensajeNuevo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Mensajes {
             get {
                 object obj = ResourceManager.GetObject("Mensajes", resourceCulture);

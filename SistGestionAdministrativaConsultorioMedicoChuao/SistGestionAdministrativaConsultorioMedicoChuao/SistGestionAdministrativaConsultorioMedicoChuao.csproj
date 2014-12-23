@@ -54,6 +54,12 @@
   <ItemGroup>
     <Compile Include="Utilitaria\ConexionBD.cs" />
     <Compile Include="Utilitaria\Utilitaria.cs" />
+    <Compile Include="Vista\ComposicionMensajes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ComposicionMensajes.Designer.cs">
+      <DependentUpon>ComposicionMensajes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\ElegirTerapeuta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,8 +90,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Vista\ComposicionMensajes.resx">
+      <DependentUpon>ComposicionMensajes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\ElegirTerapeuta.resx">
       <DependentUpon>ElegirTerapeuta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\PrincipalMensajes.resx">
+      <DependentUpon>PrincipalMensajes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\VentanaPrincipal.resx">
       <DependentUpon>VentanaPrincipal.cs</DependentUpon>
@@ -113,6 +125,7 @@
     <None Include="Resources\BusquedaPaciente.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\MensajeNuevo.png" />
     <None Include="Resources\Pagos.png" />
     <None Include="Resources\Mensajes.png" />
     <None Include="Resources\Horario.png" />

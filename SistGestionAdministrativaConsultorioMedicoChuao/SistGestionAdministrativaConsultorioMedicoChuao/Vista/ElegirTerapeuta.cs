@@ -18,7 +18,6 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
         {
             InitializeComponent();
             datosTerapeutas(); // Función en la que consigo los datos de los terapeutas       
-            //MessageBox.Show(Utilitaria.Utilitaria.identificadorOpcion.ToString());//BOOOOORRRAARRRRRRRR AL TERMINARR
         }
 
         private void B_Cancelar_Click(object sender, EventArgs e)
@@ -37,8 +36,7 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
             if (e.ColumnIndex == 1)
             {
                 Utilitaria.Utilitaria.agregarValorIdentificadorTerapeuta(Convert.ToInt32(DGV_ElegirTerapeuta.Rows[e.RowIndex].Cells[2].Value.ToString()));
-                MessageBox.Show(Utilitaria.Utilitaria.identificadorTerapeuta.ToString());
-
+              
                     if (Utilitaria.Utilitaria.identificadorOpcion == 2)
                     { 
                     }
@@ -64,7 +62,7 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
             }
         }
 
-        public void datosTerapeutas()
+        private void datosTerapeutas()
         {
             try
             {

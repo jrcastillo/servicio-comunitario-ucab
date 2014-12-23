@@ -64,14 +64,21 @@ ALTER TABLE "ListaEspera"
   
 CREATE TABLE "Mensaje"
 (
-  id numeric NOT NULL,
-  CONSTRAINT "Mens_id" PRIMARY KEY (id)
+  id integer NOT NULL DEFAULT nextval('id_mensajes'::regclass),
+  titulo text NOT NULL,
+  detalles text NOT NULL,
+  fk_terapeuta integer NOT NULL,
+  CONSTRAINT "Mens_id" PRIMARY KEY (id),
+  CONSTRAINT fk_mensaje_terapeuta FOREIGN KEY (fk_terapeuta)
+      REFERENCES "Terapeuta" (id) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION
 )
 WITH (
   OIDS=FALSE
 );
 ALTER TABLE "Mensaje"
   OWNER TO postgres;
+
 
   
 CREATE TABLE "Paciente"
@@ -124,7 +131,7 @@ ALTER TABLE "Servicio"
 
 CREATE TABLE "Terapeuta"
 (
-  id numeric NOT NULL,
+  id integer NOT NULL DEFAULT nextval('id_terapeuta'::regclass),
   nombre text,
   apellido text,
   cargo text,
@@ -163,6 +170,16 @@ CREATE SEQUENCE id_terapeuta
   CACHE 1;
 ALTER TABLE id_terapeuta
   OWNER TO postgres;
+  
+CREATE SEQUENCE id_mensajes
+  INCREMENT 1
+  MINVALUE 1
+  MAXVALUE 9223372036854775807
+  START 1
+  CACHE 1;
+ALTER TABLE id_mensajes
+  OWNER TO postgres;
+
   
 ----------------------------------------------------------------------------FIN SECUENCIAS---------------------------------------------------------------------------------------------
 
