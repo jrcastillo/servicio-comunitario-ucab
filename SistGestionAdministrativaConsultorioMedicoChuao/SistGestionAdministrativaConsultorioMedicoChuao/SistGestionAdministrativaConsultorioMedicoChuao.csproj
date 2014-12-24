@@ -131,6 +131,7 @@
     <None Include="Resources\Horario.png" />
     <None Include="Resources\Aceptar.png" />
     <None Include="Resources\Cancelar.png" />
+    <None Include="Resources\Guardar.png" />
     <Content Include="Resources\Inscripcion.png" />
     <None Include="Resources\ListaEspera.png" />
   </ItemGroup>

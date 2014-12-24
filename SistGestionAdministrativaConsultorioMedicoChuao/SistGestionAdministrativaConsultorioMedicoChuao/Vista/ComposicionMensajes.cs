@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Npgsql;
 
 namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
 {
@@ -15,6 +16,96 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
         public ComposicionMensajes()
         {
             InitializeComponent();
+        }
+
+        private void B_Cancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("¿Seguro que desea cancelar la operación y volver al menú de mensajes?. De ser así no se guardaran los cambios", "Confirmación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (resultado == DialogResult.OK)
+            {
+                SistGestionAdministrativaConsultorioMedicoChuao.Vista.PrincipalMensajes nuevaVentana = new SistGestionAdministrativaConsultorioMedicoChuao.Vista.PrincipalMensajes();
+                nuevaVentana.Show();
+                this.Close();
+            }
+        }
+
+        private void B_GuardarMensaje_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("¿Seguro que desea guardar el mensaje?", "Confirmación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (resultado == DialogResult.OK)
+            {
+                bool datos = validaCamposMensaje(TB_Titulo.Text, RTB_CuerpoMensaje.Text);
+                if (!datos)
+                {
+                    string mensajeCampoVacio = verificacionDeCampoVacio(TB_Titulo.Text, RTB_CuerpoMensaje.Text);
+                    MessageBox.Show(mensajeCampoVacio, "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                    guardaMensaje();
+            }
+        }
+
+        private bool validaCamposMensaje(string titulo, string cuerpoMensaje) 
+        {
+            if (titulo.Equals("") || cuerpoMensaje.Equals(""))
+                return false;
+            else
+                return true;
+        }
+
+        private void guardaMensaje()
+        {
+            try
+            {
+                NpgsqlConnection conexion = new NpgsqlConnection(Utilitaria.ConexionBD.cadenaConexion);
+                conexion.Open();// Abro la conexión
+                    NpgsqlCommand InsercionMensaje = conexion.CreateCommand();
+                    InsercionMensaje.CommandText = Utilitaria.Utilitaria.insercionMensaje(TB_Titulo.Text, RTB_CuerpoMensaje.Text, Utilitaria.Utilitaria.identificadorTerapeuta);
+                    InsercionMensaje.ExecuteNonQuery();
+                conexion.Close(); //Cierro conexión
+                MessageBox.Show("Mensaje guardado con exito", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    SistGestionAdministrativaConsultorioMedicoChuao.Vista.PrincipalMensajes nuevaVentana = new SistGestionAdministrativaConsultorioMedicoChuao.Vista.PrincipalMensajes();
+                    nuevaVentana.Show();
+                    this.Close();
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.ToString());
+            }
+        }
+
+        private string verificacionDeCampoVacio(string titulo, string cuerpoMensaje) 
+        {
+            string mensajeCampoVacio = "";
+            if (titulo.Equals(""))
+                {
+                    if (cuerpoMensaje.Equals(""))
+                        mensajeCampoVacio = "No puede dejar el título ni el cuerpo del mensaje vacío";
+                    else
+                        mensajeCampoVacio = "No puede dejar el título vacío";
+                }
+            else
+                    mensajeCampoVacio = "No puede dejar el cuerpo del mensaje vacío";
+
+            return mensajeCampoVacio;
+        }
+
+        private void TB_Titulo_KeyPress(object sender, KeyPressEventArgs e) // Solo letras, numeros y algunos caracteres 
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsNumber(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && e.KeyChar != '\b' && e.KeyChar != '.'
+                && e.KeyChar != ',' && e.KeyChar != '!' && e.KeyChar != '¡' && e.KeyChar != '?' && e.KeyChar != '¿' && e.KeyChar != '#' && e.KeyChar != '*')
+            { 
+                e.Handled = true; 
+            }
+        }
+
+        private void RTB_CuerpoMensaje_KeyPress(object sender, KeyPressEventArgs e) // Solo letras, numeros y algunos caracteres
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsNumber(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && e.KeyChar != '\b' && e.KeyChar != '.'
+                && e.KeyChar != ',' && e.KeyChar != '!' && e.KeyChar != '¡' && e.KeyChar != '?' && e.KeyChar != '¿' && e.KeyChar != '#' && e.KeyChar != '*')
+            {
+                e.Handled = true;
+            }
         }
     }
 }

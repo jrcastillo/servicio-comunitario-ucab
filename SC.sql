@@ -183,3 +183,5 @@ ALTER TABLE id_mensajes
   
 ----------------------------------------------------------------------------FIN SECUENCIAS---------------------------------------------------------------------------------------------
 
+SELECT titulo as Titulo, id as Identificador, case WHEN dia=1 THEN 'Lunes' WHEN dia=2 THEN 'Martes' WHEN dia=3 THEN 'Miércoles' WHEN dia=4 THEN 'Jueves' WHEN dia=5 THEN 'Viernes' WHEN dia=6 THEN 'Sabado' WHEN dia=7 THEN 'Domingo' END 
+|| ' ' || to_char("fechaCreacion",'dd/mm/yyyy') || ' a la(s) ' || to_char("fechaCreacion",'hh:mi AM') as Fecha FROM "Mensaje" where fk_terapeuta= 1 order by Fecha;

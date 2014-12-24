@@ -17,6 +17,7 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao
             InitializeComponent();
             Utilitaria.Utilitaria.reiniciarIdentificadorOpcion();
             Utilitaria.Utilitaria.reiniciarIdentificadorTerapeuta();
+            Utilitaria.Utilitaria.reiniciarIdentificadorMensaje();
         }
 
         private void B_Salir_Click(object sender, EventArgs e)
