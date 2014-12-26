@@ -17,6 +17,7 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
         {
             InitializeComponent();
             datosMensajes(); // Cargado de los datos de los mensajes 
+            nombreCargoTerapeuta(); // Cargando los datos del terapeuta 
         }
 
         private void B_Salir_Click(object sender, EventArgs e)
@@ -35,7 +36,10 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
             if (e.ColumnIndex == 2)
             {
                 Utilitaria.Utilitaria.agregarValorIdentificadorMensaje(Convert.ToInt32(DGV_Mensajes.Rows[e.RowIndex].Cells[3].Value.ToString()));
-                MessageBox.Show(Utilitaria.Utilitaria.identificadorMensaje.ToString());
+                SistGestionAdministrativaConsultorioMedicoChuao.Vista.VistaMensajes nuevaVentana = new SistGestionAdministrativaConsultorioMedicoChuao.Vista.VistaMensajes();
+                nuevaVentana.Show();
+                this.Close();
+                
             }
         }
 
@@ -49,7 +53,7 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
                 datosMensajes.Fill(datosObtenidos); // Volcado de los datos en el almacen de datos
                 for (int i = 0; i < datosObtenidos.Tables[0].Rows.Count; i++)
                 {
-                    DGV_Mensajes.Rows.Add(Utilitaria.Utilitaria.diaSemana(Convert.ToInt32(datosObtenidos.Tables[0].Rows[i][3].ToString()))+datosObtenidos.Tables[0].Rows[i][2], datosObtenidos.Tables[0].Rows[i][0], "OK", datosObtenidos.Tables[0].Rows[i][1]); // Mostrar los datos en el dgv, en la colunma 4 se guardara de manera oculta el id del mensaje 
+                    DGV_Mensajes.Rows.Add(Utilitaria.Utilitaria.diaSemana(Convert.ToInt32(datosObtenidos.Tables[0].Rows[i][3].ToString()))+datosObtenidos.Tables[0].Rows[i][2].ToString(), datosObtenidos.Tables[0].Rows[i][0].ToString(), "OK", datosObtenidos.Tables[0].Rows[i][1].ToString()); // Mostrar los datos en el dgv, en la colunma 4 se guardara de manera oculta el id del mensaje 
                 }
                 Utilitaria.ConexionBD.conectarBD().Close(); //Cierro conexión
             }
@@ -67,6 +71,26 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
                 SistGestionAdministrativaConsultorioMedicoChuao.Vista.ComposicionMensajes nuevaVentana = new SistGestionAdministrativaConsultorioMedicoChuao.Vista.ComposicionMensajes();
                 nuevaVentana.Show();
                 this.Close();
+            }
+        }
+
+        private void nombreCargoTerapeuta() 
+        {
+            try
+            {
+                Utilitaria.ConexionBD.conectarBD().Open(); //Abro conexión
+                DataSet datosObtenidos = new DataSet(); //Almacen de los datos que se obtengan en la consulta
+                NpgsqlDataAdapter datosTerapeuta = new NpgsqlDataAdapter(Utilitaria.Utilitaria.consultaTerapeutas, Utilitaria.ConexionBD.conectarBD()); //Ejecución de la consulta
+                datosTerapeuta.Fill(datosObtenidos); // Volcado de los datos en el almacen de datos
+                for (int i = 0; i < datosObtenidos.Tables[0].Rows.Count; i++)
+                {
+                    L_NombreTerapeuta.Text = "Mensajes de: " + datosObtenidos.Tables[0].Rows[i][0].ToString();
+                }
+                Utilitaria.ConexionBD.conectarBD().Close(); //Cierro conexión
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
             }
         }
 

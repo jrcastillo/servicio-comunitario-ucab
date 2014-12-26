@@ -12,7 +12,8 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Utilitaria
         public static int identificadorOpcion = 0;
         public static int identificadorTerapeuta = 0;
         public static int identificadorMensaje = 0;
-        public static string consultaTerapeutas = "select nombre ||', '|| apellido ||' ('|| cargo ||')' as Persona, id as Identificador from \"Terapeuta\" order by Persona;";
+        public static int banderaUpdateMensaje = 0;
+        public static string consultaTerapeutas = "select nombre ||', '|| apellido ||' ('|| cargo ||').' as Persona, id as Identificador from \"Terapeuta\" order by Persona;";
         public static string consultaMensajes(int idTerapeuta) 
         {
             return "select titulo as Titulo, id as IdMensaje, to_char(\"fechaCreacion\",'dd/mm/yyyy') || ' a la(s) ' || to_char(\"fechaCreacion\",'hh:mi AM') as Fecha, dia as Dia from \"Mensaje\" where fk_terapeuta=" + idTerapeuta + " order by Fecha;"; 
@@ -20,9 +21,20 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Utilitaria
         public static string insercionMensaje(string titulo, string detalles, int idTerapeuta) 
         {
             return "INSERT INTO \"Mensaje\"(titulo, detalles, fk_terapeuta, \"fechaCreacion\", dia) VALUES ('" + titulo + "', '" + detalles + "', " + idTerapeuta + ", current_timestamp, extract (dow from current_timestamp));";
-
         }
-       
+        public static string contenidoMensaje(int idMensaje)
+        {
+            return "select titulo as Titulo, id as IdMensaje, to_char(\"fechaCreacion\",'dd/mm/yyyy') || ' a la(s) ' || to_char(\"fechaCreacion\",'hh:mi AM') as Fecha, dia as Dia, detalles as Detalles from \"Mensaje\" where id=" + idMensaje + ";";
+        }
+        public static string borrarMensaje(int idMensaje)
+        {
+            return "DELETE FROM \"Mensaje\" WHERE id="+ idMensaje +";";
+        }
+        public static string modificarMensaje(string titulo, string detalles, int idMensaje)
+        {
+            return "UPDATE \"Mensaje\" SET titulo='"+titulo+"', detalles='"+detalles+"' WHERE id="+idMensaje+";";
+        }
+
         public static void reiniciarIdentificadorOpcion() 
         {
             identificadorOpcion = 0;
@@ -46,6 +58,16 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Utilitaria
         public static void reiniciarIdentificadorMensaje()
         {
             identificadorMensaje = 0;
+        }
+
+        public static void encenderBanderaUpdateMensaje()
+        {
+            banderaUpdateMensaje = 1;
+        }
+
+        public static void reiniciarBanderaUpdateMensaje()
+        {
+            banderaUpdateMensaje = 0;
         }
 
         public static int agregarValorIdentificadorMensaje(int valor)

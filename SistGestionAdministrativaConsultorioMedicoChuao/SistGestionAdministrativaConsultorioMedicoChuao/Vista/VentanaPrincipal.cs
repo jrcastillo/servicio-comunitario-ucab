@@ -18,11 +18,12 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao
             Utilitaria.Utilitaria.reiniciarIdentificadorOpcion();
             Utilitaria.Utilitaria.reiniciarIdentificadorTerapeuta();
             Utilitaria.Utilitaria.reiniciarIdentificadorMensaje();
+            Utilitaria.Utilitaria.reiniciarBanderaUpdateMensaje();
         }
 
         private void B_Salir_Click(object sender, EventArgs e)
         {
-            DialogResult resultado = MessageBox.Show("¿Seguro que desea salir del sistema?", "Advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            DialogResult resultado = MessageBox.Show("¿Seguro que desea salir del sistema?", "Advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (resultado == DialogResult.OK)
             Application.Exit();
         }

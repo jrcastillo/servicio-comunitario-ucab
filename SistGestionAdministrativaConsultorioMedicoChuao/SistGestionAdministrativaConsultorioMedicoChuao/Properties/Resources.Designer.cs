@@ -73,6 +73,16 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Borrar {
+            get {
+                object obj = ResourceManager.GetObject("Borrar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BusquedaPaciente {
             get {
                 object obj = ResourceManager.GetObject("BusquedaPaciente", resourceCulture);
@@ -156,6 +166,16 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Properties {
         internal static System.Drawing.Bitmap Mensajes {
             get {
                 object obj = ResourceManager.GetObject("Mensajes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Modificar {
+            get {
+                object obj = ResourceManager.GetObject("Modificar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -16,6 +16,8 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
         public ComposicionMensajes()
         {
             InitializeComponent();
+            if (Utilitaria.Utilitaria.banderaUpdateMensaje == 1)
+                datosMensaje();
         }
 
         private void B_Cancelar_Click(object sender, EventArgs e)
@@ -23,6 +25,7 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
             DialogResult resultado = MessageBox.Show("¿Seguro que desea cancelar la operación y volver al menú de mensajes?. De ser así no se guardaran los cambios", "Confirmación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (resultado == DialogResult.OK)
             {
+                Utilitaria.Utilitaria.reiniciarBanderaUpdateMensaje();
                 SistGestionAdministrativaConsultorioMedicoChuao.Vista.PrincipalMensajes nuevaVentana = new SistGestionAdministrativaConsultorioMedicoChuao.Vista.PrincipalMensajes();
                 nuevaVentana.Show();
                 this.Close();
@@ -41,7 +44,16 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
                     MessageBox.Show(mensajeCampoVacio, "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
-                    guardaMensaje();
+                {
+                    if (Utilitaria.Utilitaria.banderaUpdateMensaje == 0)
+                        guardaMensaje();
+                    else
+                    {
+                        modificarMensaje();
+                        Utilitaria.Utilitaria.reiniciarBanderaUpdateMensaje();
+                    }
+
+                }
             }
         }
 
@@ -105,6 +117,47 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
                 && e.KeyChar != ',' && e.KeyChar != '!' && e.KeyChar != '¡' && e.KeyChar != '?' && e.KeyChar != '¿' && e.KeyChar != '#' && e.KeyChar != '*')
             {
                 e.Handled = true;
+            }
+        }
+
+        private void modificarMensaje() 
+        {
+            try
+            {
+                NpgsqlConnection conexion = new NpgsqlConnection(Utilitaria.ConexionBD.cadenaConexion);
+                conexion.Open();// Abro la conexión
+                NpgsqlCommand ModificarMensaje = conexion.CreateCommand();
+                ModificarMensaje.CommandText = Utilitaria.Utilitaria.modificarMensaje(TB_Titulo.Text, RTB_CuerpoMensaje.Text, Utilitaria.Utilitaria.identificadorMensaje);
+                ModificarMensaje.ExecuteNonQuery();
+                conexion.Close(); //Cierro conexión
+                MessageBox.Show("Mensaje modificado con exito", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                SistGestionAdministrativaConsultorioMedicoChuao.Vista.PrincipalMensajes nuevaVentana = new SistGestionAdministrativaConsultorioMedicoChuao.Vista.PrincipalMensajes();
+                nuevaVentana.Show();
+                this.Close();
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.ToString());
+            }
+        }
+
+        private void datosMensaje()
+        {
+            try
+            {
+                Utilitaria.ConexionBD.conectarBD().Open(); //Abro conexión
+                DataSet datosObtenidos = new DataSet(); //Almacen de los datos que se obtengan en la consulta
+                NpgsqlDataAdapter datosMensajes = new NpgsqlDataAdapter(Utilitaria.Utilitaria.contenidoMensaje(Utilitaria.Utilitaria.identificadorMensaje), Utilitaria.ConexionBD.conectarBD()); //Ejecución de la consulta
+                datosMensajes.Fill(datosObtenidos); // Volcado de los datos en el almacen de datos
+
+                TB_Titulo.Text = datosObtenidos.Tables[0].Rows[0][0].ToString();
+                RTB_CuerpoMensaje.Text = datosObtenidos.Tables[0].Rows[0][4].ToString();
+
+                Utilitaria.ConexionBD.conectarBD().Close(); //Cierro conexión
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
             }
         }
     }
