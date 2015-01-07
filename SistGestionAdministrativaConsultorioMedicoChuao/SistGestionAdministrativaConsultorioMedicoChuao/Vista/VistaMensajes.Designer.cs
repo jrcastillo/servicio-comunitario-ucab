@@ -46,10 +46,10 @@
             // L_VistaMensajes
             // 
             this.L_VistaMensajes.AutoSize = true;
-            this.L_VistaMensajes.Font = new System.Drawing.Font("Bauhaus 93", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_VistaMensajes.Font = new System.Drawing.Font("Berlin Sans FB", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.L_VistaMensajes.Location = new System.Drawing.Point(504, 18);
             this.L_VistaMensajes.Name = "L_VistaMensajes";
-            this.L_VistaMensajes.Size = new System.Drawing.Size(272, 36);
+            this.L_VistaMensajes.Size = new System.Drawing.Size(273, 40);
             this.L_VistaMensajes.TabIndex = 0;
             this.L_VistaMensajes.Text = "Vista de mensaje";
             // 

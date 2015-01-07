@@ -60,11 +60,29 @@
     <Compile Include="Vista\ComposicionMensajes.Designer.cs">
       <DependentUpon>ComposicionMensajes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\ComposicionRegistroListaEspera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ComposicionRegistroListaEspera.Designer.cs">
+      <DependentUpon>ComposicionRegistroListaEspera.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\ElegirTerapeuta.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista\ElegirTerapeuta.Designer.cs">
       <DependentUpon>ElegirTerapeuta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\PrincipalInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\PrincipalInventario.Designer.cs">
+      <DependentUpon>PrincipalInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\PrincipalListaEspera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\PrincipalListaEspera.Designer.cs">
+      <DependentUpon>PrincipalListaEspera.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\PrincipalMensajes.cs">
       <SubType>Form</SubType>
@@ -99,8 +117,17 @@
     <EmbeddedResource Include="Vista\ComposicionMensajes.resx">
       <DependentUpon>ComposicionMensajes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ComposicionRegistroListaEspera.resx">
+      <DependentUpon>ComposicionRegistroListaEspera.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\ElegirTerapeuta.resx">
       <DependentUpon>ElegirTerapeuta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\PrincipalInventario.resx">
+      <DependentUpon>PrincipalInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\PrincipalListaEspera.resx">
+      <DependentUpon>PrincipalListaEspera.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\PrincipalMensajes.resx">
       <DependentUpon>PrincipalMensajes.cs</DependentUpon>
@@ -134,6 +161,7 @@
     <None Include="Resources\BusquedaPaciente.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\NuevoListaEspera.png" />
     <None Include="Resources\Modificar.png" />
     <None Include="Resources\MensajeNuevo.png" />
     <None Include="Resources\Pagos.png" />

@@ -18,7 +18,7 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao
             Utilitaria.Utilitaria.reiniciarIdentificadorOpcion();
             Utilitaria.Utilitaria.reiniciarIdentificadorTerapeuta();
             Utilitaria.Utilitaria.reiniciarIdentificadorMensaje();
-            Utilitaria.Utilitaria.reiniciarBanderaUpdateMensaje();
+            Utilitaria.Utilitaria.reiniciarIdentificadorRegistroListaEspera();
         }
 
         private void B_Salir_Click(object sender, EventArgs e)
@@ -56,6 +56,14 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao
         {
             Utilitaria.Utilitaria.agregarValorIdentificadorOpcion(6);
             SistGestionAdministrativaConsultorioMedicoChuao.Vista.ElegirTerapeuta nuevaVentana = new SistGestionAdministrativaConsultorioMedicoChuao.Vista.ElegirTerapeuta();
+            nuevaVentana.Show();
+            this.Hide();  
+        }
+
+        private void B_Inventario_Click(object sender, EventArgs e)
+        {
+            Utilitaria.Utilitaria.agregarValorIdentificadorOpcion(7);
+            SistGestionAdministrativaConsultorioMedicoChuao.Vista.PrincipalInventario nuevaVentana = new SistGestionAdministrativaConsultorioMedicoChuao.Vista.PrincipalInventario();
             nuevaVentana.Show();
             this.Hide();  
         }

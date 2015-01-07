@@ -52,11 +52,11 @@
             this.L_MenuPrincipal.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.L_MenuPrincipal.AutoSize = true;
             this.L_MenuPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.L_MenuPrincipal.Font = new System.Drawing.Font("Bauhaus 93", 56.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_MenuPrincipal.Font = new System.Drawing.Font("Berlin Sans FB", 56.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.L_MenuPrincipal.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.L_MenuPrincipal.Location = new System.Drawing.Point(362, 10);
             this.L_MenuPrincipal.Name = "L_MenuPrincipal";
-            this.L_MenuPrincipal.Size = new System.Drawing.Size(555, 84);
+            this.L_MenuPrincipal.Size = new System.Drawing.Size(579, 94);
             this.L_MenuPrincipal.TabIndex = 1;
             this.L_MenuPrincipal.Text = "Menú Principal";
             this.L_MenuPrincipal.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -254,6 +254,7 @@
             this.B_Inventario.Size = new System.Drawing.Size(223, 206);
             this.B_Inventario.TabIndex = 2;
             this.B_Inventario.UseVisualStyleBackColor = false;
+            this.B_Inventario.Click += new System.EventHandler(this.B_Inventario_Click);
             // 
             // B_Salir
             // 

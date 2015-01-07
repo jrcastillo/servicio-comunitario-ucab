@@ -59,10 +59,10 @@
             // L_ComposicionMensaje
             // 
             this.L_ComposicionMensaje.AutoSize = true;
-            this.L_ComposicionMensaje.Font = new System.Drawing.Font("Bauhaus 93", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_ComposicionMensaje.Font = new System.Drawing.Font("Berlin Sans FB", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.L_ComposicionMensaje.Location = new System.Drawing.Point(390, 9);
             this.L_ComposicionMensaje.Name = "L_ComposicionMensaje";
-            this.L_ComposicionMensaje.Size = new System.Drawing.Size(397, 36);
+            this.L_ComposicionMensaje.Size = new System.Drawing.Size(385, 40);
             this.L_ComposicionMensaje.TabIndex = 2;
             this.L_ComposicionMensaje.Text = "Composición de mensaje";
             // 

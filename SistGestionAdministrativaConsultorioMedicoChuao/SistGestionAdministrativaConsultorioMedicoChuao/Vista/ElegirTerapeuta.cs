@@ -43,6 +43,9 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
 
                     if (Utilitaria.Utilitaria.identificadorOpcion == 3)
                     {
+                        SistGestionAdministrativaConsultorioMedicoChuao.Vista.PrincipalListaEspera nuevaVentana = new SistGestionAdministrativaConsultorioMedicoChuao.Vista.PrincipalListaEspera();
+                        nuevaVentana.Show();
+                        this.Close();
                     }
 
                     if (Utilitaria.Utilitaria.identificadorOpcion == 4)

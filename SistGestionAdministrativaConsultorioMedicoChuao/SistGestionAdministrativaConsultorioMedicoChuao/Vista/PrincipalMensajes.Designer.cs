@@ -51,7 +51,7 @@
             // 
             this.L_MensajeNuevo.AutoSize = true;
             this.L_MensajeNuevo.Font = new System.Drawing.Font("Calisto MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_MensajeNuevo.Location = new System.Drawing.Point(422, 591);
+            this.L_MensajeNuevo.Location = new System.Drawing.Point(422, 601);
             this.L_MensajeNuevo.Name = "L_MensajeNuevo";
             this.L_MensajeNuevo.Size = new System.Drawing.Size(144, 18);
             this.L_MensajeNuevo.TabIndex = 2;
@@ -61,7 +61,7 @@
             // 
             this.L_Cancelar.AutoSize = true;
             this.L_Cancelar.Font = new System.Drawing.Font("Calisto MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_Cancelar.Location = new System.Drawing.Point(742, 591);
+            this.L_Cancelar.Location = new System.Drawing.Point(742, 601);
             this.L_Cancelar.Name = "L_Cancelar";
             this.L_Cancelar.Size = new System.Drawing.Size(97, 18);
             this.L_Cancelar.TabIndex = 3;
@@ -70,10 +70,10 @@
             // L_MenuPplMsj
             // 
             this.L_MenuPplMsj.AutoSize = true;
-            this.L_MenuPplMsj.Font = new System.Drawing.Font("Bauhaus 93", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_MenuPplMsj.Font = new System.Drawing.Font("Berlin Sans FB", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.L_MenuPplMsj.Location = new System.Drawing.Point(446, 9);
             this.L_MenuPplMsj.Name = "L_MenuPplMsj";
-            this.L_MenuPplMsj.Size = new System.Drawing.Size(393, 36);
+            this.L_MenuPplMsj.Size = new System.Drawing.Size(391, 40);
             this.L_MenuPplMsj.TabIndex = 4;
             this.L_MenuPplMsj.Text = "Menú principal mensajes";
             // 
@@ -166,7 +166,7 @@
             this.B_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.B_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.B_Salir.Image = global::SistGestionAdministrativaConsultorioMedicoChuao.Properties.Resources.Cancelar;
-            this.B_Salir.Location = new System.Drawing.Point(745, 524);
+            this.B_Salir.Location = new System.Drawing.Point(745, 534);
             this.B_Salir.Name = "B_Salir";
             this.B_Salir.Size = new System.Drawing.Size(93, 70);
             this.B_Salir.TabIndex = 1;
@@ -182,7 +182,7 @@
             this.B_MensajeNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.B_MensajeNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.B_MensajeNuevo.Image = global::SistGestionAdministrativaConsultorioMedicoChuao.Properties.Resources.MensajeNuevo;
-            this.B_MensajeNuevo.Location = new System.Drawing.Point(451, 524);
+            this.B_MensajeNuevo.Location = new System.Drawing.Point(451, 534);
             this.B_MensajeNuevo.Name = "B_MensajeNuevo";
             this.B_MensajeNuevo.Size = new System.Drawing.Size(85, 70);
             this.B_MensajeNuevo.TabIndex = 0;
@@ -203,7 +203,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.ClientSize = new System.Drawing.Size(1279, 618);
+            this.ClientSize = new System.Drawing.Size(1279, 626);
             this.ControlBox = false;
             this.Controls.Add(this.L_NombreTerapeuta);
             this.Controls.Add(this.DGV_Mensajes);

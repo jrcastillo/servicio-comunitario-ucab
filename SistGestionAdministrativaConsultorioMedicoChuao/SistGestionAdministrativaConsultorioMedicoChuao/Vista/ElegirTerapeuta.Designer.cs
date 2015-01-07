@@ -58,10 +58,10 @@
             // L_ElegirTerapeuta
             // 
             this.L_ElegirTerapeuta.AutoSize = true;
-            this.L_ElegirTerapeuta.Font = new System.Drawing.Font("Bauhaus 93", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_ElegirTerapeuta.Font = new System.Drawing.Font("Berlin Sans FB", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.L_ElegirTerapeuta.Location = new System.Drawing.Point(152, 5);
             this.L_ElegirTerapeuta.Name = "L_ElegirTerapeuta";
-            this.L_ElegirTerapeuta.Size = new System.Drawing.Size(265, 36);
+            this.L_ElegirTerapeuta.Size = new System.Drawing.Size(274, 40);
             this.L_ElegirTerapeuta.TabIndex = 4;
             this.L_ElegirTerapeuta.Text = "Elegir Terapeuta";
             // 

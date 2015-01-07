@@ -84,7 +84,7 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
 
         private void B_Modificar_Click(object sender, EventArgs e)
         {
-            DialogResult resultado = MessageBox.Show("¿Seguro que desea ir a la ventana de modificación de mensajes?", "Confirmación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            DialogResult resultado = MessageBox.Show("¿Seguro que desea modificar este mensaje?", "Confirmación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (resultado == DialogResult.OK)
             {
                 Utilitaria.Utilitaria.encenderBanderaUpdateMensaje();
