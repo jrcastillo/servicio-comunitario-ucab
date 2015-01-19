@@ -15,7 +15,13 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Utilitaria
         public static int identificadorMensaje = 0;
         public static int banderaUpdateMensaje = 0;
         public static int banderaUpdateRegistroListaEspera = 0;
+        public static string consultaProductosInventario = "select nombre as Producto from \"Inventario\" order by id;";
         public static string consultaTerapeutas = "select nombre ||', '|| apellido ||' ('|| cargo ||').' as Persona, id as Identificador from \"Terapeuta\" order by Persona;";
+        public static string consultaInventario = "select 'Producto: ' || nombre || '. Cantidad en inventario = ' || cantidad from \"Inventario\" order by nombre;";
+        public static string consultaNombreTerapeuta(int idTerapeuta)
+        {
+            return "select nombre ||', '|| apellido ||' ('|| cargo ||').' as Persona from \"Terapeuta\" where id = "+idTerapeuta+"order by Persona;";
+        }
         public static string consultaListaEspera(int idTerapeuta)
         { 
             return "SELECT \"nombreApellidoPaciente\", \"nombreApellidoRepresentante\",\"numeroTelefono\", \"numeroOpcional\", \"referidoPor\", \"detallesReferencia\", id FROM \"ListaEspera\" WHERE fk_terapeuta ="+idTerapeuta+" order by id;";
@@ -56,9 +62,17 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Utilitaria
         {
             return "UPDATE \"Mensaje\" SET titulo='"+titulo+"', detalles='"+detalles+"' WHERE id="+idMensaje+";";
         }
+        public static string modificarProductoInventario(int cantidadNueva, int idProducto)
+        {
+            return "UPDATE \"Inventario\" SET cantidad=cantidad+" + cantidadNueva + " WHERE id=" + idProducto + ";";
+        }
         public static string modificarRegistroListaEspera(string nombrePaciente, string nombreRepresentante, string telefono, string telefonoOpcional, string referidoPor, string detallesReferencia, int idRegistro)
         {
             return "UPDATE \"ListaEspera\" SET \"nombreApellidoPaciente\"='"+ nombrePaciente +"', \"nombreApellidoRepresentante\"='"+nombreRepresentante+"', \"referidoPor\"='"+referidoPor+"', \"detallesReferencia\"='"+detallesReferencia+"', \"numeroTelefono\"='"+telefono+"', \"numeroOpcional\"='"+telefonoOpcional+"' WHERE id="+idRegistro+";";
+        }
+        public static string consultaIdProducto(string nombreProducto)
+        {
+            return "SELECT id as Identificador FROM \"Inventario\" WHERE nombre = '" + nombreProducto + "'";
         }
 
         public static void reiniciarIdentificadorOpcion() 

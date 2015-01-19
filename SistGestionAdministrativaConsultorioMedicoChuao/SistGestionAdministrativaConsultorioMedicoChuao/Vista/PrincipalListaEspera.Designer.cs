@@ -86,7 +86,7 @@
             // 
             this.L_Salir.AutoSize = true;
             this.L_Salir.Font = new System.Drawing.Font("Calisto MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_Salir.Location = new System.Drawing.Point(921, 549);
+            this.L_Salir.Location = new System.Drawing.Point(923, 549);
             this.L_Salir.Name = "L_Salir";
             this.L_Salir.Size = new System.Drawing.Size(55, 18);
             this.L_Salir.TabIndex = 6;

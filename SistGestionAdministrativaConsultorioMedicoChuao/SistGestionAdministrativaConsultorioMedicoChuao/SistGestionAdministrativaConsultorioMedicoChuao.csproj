@@ -54,6 +54,12 @@
   <ItemGroup>
     <Compile Include="Utilitaria\ConexionBD.cs" />
     <Compile Include="Utilitaria\Utilitaria.cs" />
+    <Compile Include="Vista\AgregarProductoInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\AgregarProductoInventario.Designer.cs">
+      <DependentUpon>AgregarProductoInventario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\ComposicionMensajes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Vista\AgregarProductoInventario.resx">
+      <DependentUpon>AgregarProductoInventario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\ComposicionMensajes.resx">
       <DependentUpon>ComposicionMensajes.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,6 +170,7 @@
     <None Include="Resources\BusquedaPaciente.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Quitar.png" />
     <None Include="Resources\NuevoListaEspera.png" />
     <None Include="Resources\Modificar.png" />
     <None Include="Resources\MensajeNuevo.png" />
@@ -171,6 +181,7 @@
     <None Include="Resources\Cancelar.png" />
     <None Include="Resources\Guardar.png" />
     <None Include="Resources\Borrar.png" />
+    <None Include="Resources\Agregar.png" />
     <Content Include="Resources\Inscripcion.png" />
     <None Include="Resources\ListaEspera.png" />
   </ItemGroup>

@@ -80,7 +80,7 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
             {
                 Utilitaria.ConexionBD.conectarBD().Open(); //Abro conexión
                 DataSet datosObtenidos = new DataSet(); //Almacen de los datos que se obtengan en la consulta
-                NpgsqlDataAdapter datosTerapeuta = new NpgsqlDataAdapter(Utilitaria.Utilitaria.consultaTerapeutas, Utilitaria.ConexionBD.conectarBD()); //Ejecución de la consulta
+                NpgsqlDataAdapter datosTerapeuta = new NpgsqlDataAdapter(Utilitaria.Utilitaria.consultaNombreTerapeuta(Utilitaria.Utilitaria.identificadorTerapeuta), Utilitaria.ConexionBD.conectarBD()); //Ejecución de la consulta
                 datosTerapeuta.Fill(datosObtenidos); // Volcado de los datos en el almacen de datos
                 for (int i = 0; i < datosObtenidos.Tables[0].Rows.Count; i++)
                 {
