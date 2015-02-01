@@ -41,7 +41,7 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
 
         private void B_Cancelar_Click(object sender, EventArgs e)
         {
-            DialogResult resultado = MessageBox.Show("¿Seguro que desea cancelar y volver a la página principal de inventario?", "Confirmación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            DialogResult resultado = MessageBox.Show("¿Seguro que desea cancelar y volver a la ventana principal de inventario?", "Confirmación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (resultado == DialogResult.OK)
             {
                 SistGestionAdministrativaConsultorioMedicoChuao.Vista.PrincipalInventario nuevaVentana = new SistGestionAdministrativaConsultorioMedicoChuao.Vista.PrincipalInventario();
@@ -120,7 +120,8 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
             }
             catch (Exception exp)
             {
-                MessageBox.Show(exp.ToString());
+                string error = exp.ToString();
+                MessageBox.Show("No se pudo agregar el producto al inventario, vuelva a intentarlo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -138,5 +139,18 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
 
             return identificador;
         }
+
+        private void LL_AgregarProducto_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("¿Seguro que desea agregar un producto a la lista del inventario?", "Confirmación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (resultado == DialogResult.OK)
+            {
+                SistGestionAdministrativaConsultorioMedicoChuao.Vista.AgregarProductoLista nuevaVentana = new SistGestionAdministrativaConsultorioMedicoChuao.Vista.AgregarProductoLista();
+                nuevaVentana.Show();
+                this.Close();
+            }
+        }
+
+
     }
 }

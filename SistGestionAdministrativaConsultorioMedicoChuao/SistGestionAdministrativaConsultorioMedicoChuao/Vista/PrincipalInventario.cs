@@ -32,7 +32,19 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
 
         private void B_Quitar_Click(object sender, EventArgs e)
         {
-
+            int seleccionado = LB_Inventario.SelectedIndex;
+            if (seleccionado == -1)
+                MessageBox.Show("Primero debe seleccionar un registro", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else
+            {
+                DialogResult resultado = MessageBox.Show("¿Seguro que desea ir a la ventana de gestion de eliminación de productos?", "Confirmación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (resultado == DialogResult.OK)
+                {
+                    SistGestionAdministrativaConsultorioMedicoChuao.Vista.TipoEliminacionProducto nuevaVentana = new SistGestionAdministrativaConsultorioMedicoChuao.Vista.TipoEliminacionProducto();
+                    nuevaVentana.Show();
+                    this.Close();
+                }
+            }
         }
 
         private void B_Agregar_Click(object sender, EventArgs e)

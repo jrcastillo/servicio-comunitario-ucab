@@ -112,6 +112,7 @@
             this.LL_AgregarProducto.TabIndex = 6;
             this.LL_AgregarProducto.TabStop = true;
             this.LL_AgregarProducto.Text = "AGREGAR PRODUCTO NUEVO A LA LISTA";
+            this.LL_AgregarProducto.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LL_AgregarProducto_LinkClicked);
             // 
             // TB_Cantidad
             // 

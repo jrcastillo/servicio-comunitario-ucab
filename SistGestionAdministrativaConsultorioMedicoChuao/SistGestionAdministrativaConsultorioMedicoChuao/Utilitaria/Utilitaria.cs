@@ -34,9 +34,17 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Utilitaria
         {
             return "select titulo as Titulo, id as IdMensaje, to_char(\"fechaCreacion\",'dd/mm/yyyy') || ' a la(s) ' || to_char(\"fechaCreacion\",'hh:mi AM') as Fecha, dia as Dia from \"Mensaje\" where fk_terapeuta=" + idTerapeuta + " order by Fecha;"; 
         }
+        public static string validaExistenciaProducto(string nombre)
+        {
+            return "select count(*) from \"Inventario\" where nombre='" + nombre + "';";
+        }
         public static string insercionMensaje(string titulo, string detalles, int idTerapeuta) 
         {
             return "INSERT INTO \"Mensaje\"(titulo, detalles, fk_terapeuta, \"fechaCreacion\", dia) VALUES ('" + titulo + "', '" + detalles + "', " + idTerapeuta + ", current_timestamp, extract (dow from current_timestamp));";
+        }
+        public static string agregarProductoInventario(string nombre)
+        {
+            return "INSERT INTO \"Inventario\"(nombre, cantidad) VALUES ('" + nombre + "', 0);";
         }
         public static string insercionRegistroListaEspera(string nombrePaciente, string nombreRepresentante, string telefono, string telefonoOpcional, string referidoPor, string detallesReferencia, int idTerapeuta)
         {
