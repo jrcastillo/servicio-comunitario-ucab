@@ -83,6 +83,7 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
             NpgsqlDataAdapter datosListaEspera = new NpgsqlDataAdapter(Utilitaria.Utilitaria.consultaIdItemListaEspera(Utilitaria.Utilitaria.identificadorTerapeuta), Utilitaria.ConexionBD.conectarBD()); //Ejecución de la consulta
             datosListaEspera.Fill(datosObtenidos); // Volcado de los datos en el almacen de datos
             Utilitaria.ConexionBD.conectarBD().Close(); //Cierro conexión
+            MessageBox.Show(LB_ListaEspera.SelectedIndex.ToString());
             return datosObtenidos.Tables[0].Rows[LB_ListaEspera.SelectedIndex][0].ToString();
         }
         

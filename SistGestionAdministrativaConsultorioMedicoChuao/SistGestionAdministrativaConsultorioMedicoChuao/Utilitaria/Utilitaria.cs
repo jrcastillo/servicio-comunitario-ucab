@@ -13,11 +13,12 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Utilitaria
         public static int identificadorTerapeuta = 0;
         public static int identificadorRegistroListaEspera = 0;
         public static int identificadorMensaje = 0;
+        public static int identificadorProductoInventario = 0;
         public static int banderaUpdateMensaje = 0;
         public static int banderaUpdateRegistroListaEspera = 0;
         public static string consultaProductosInventario = "select nombre as Producto from \"Inventario\" order by id;";
         public static string consultaTerapeutas = "select nombre ||', '|| apellido ||' ('|| cargo ||').' as Persona, id as Identificador from \"Terapeuta\" order by Persona;";
-        public static string consultaInventario = "select 'Producto: ' || nombre || '. Cantidad en inventario = ' || cantidad from \"Inventario\" order by nombre;";
+        public static string consultaInventario = "select nombre, cantidad from \"Inventario\" order by nombre;";
         public static string consultaNombreTerapeuta(int idTerapeuta)
         {
             return "select nombre ||', '|| apellido ||' ('|| cargo ||').' as Persona from \"Terapeuta\" where id = "+idTerapeuta+"order by Persona;";
@@ -97,6 +98,18 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Utilitaria
         {
             identificadorRegistroListaEspera = 0;
         }
+
+
+        public static int agregarValorIdentificadorProductoInventario(int valor)
+        {
+            return identificadorProductoInventario = valor;
+        }
+
+        public static void reiniciarIdentificadorProductoInventario()
+        {
+            identificadorProductoInventario = 0;
+        }
+        
 
         public static int agregarValorIdentificadorRegistroListaEspera(int valor)
         {

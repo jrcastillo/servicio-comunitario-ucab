@@ -13,9 +13,12 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
 {
     public partial class PrincipalInventario : Form
     {
+        List<string> nombreProductos = new List<string>();
+
         public PrincipalInventario()
         {
             InitializeComponent();
+            Utilitaria.Utilitaria.reiniciarIdentificadorProductoInventario();
             cargarInventario();
         }
 
@@ -40,6 +43,7 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
                 DialogResult resultado = MessageBox.Show("¿Seguro que desea ir a la ventana de gestion de eliminación de productos?", "Confirmación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (resultado == DialogResult.OK)
                 {
+                    Utilitaria.Utilitaria.agregarValorIdentificadorProductoInventario(idProductoInventario());
                     SistGestionAdministrativaConsultorioMedicoChuao.Vista.TipoEliminacionProducto nuevaVentana = new SistGestionAdministrativaConsultorioMedicoChuao.Vista.TipoEliminacionProducto();
                     nuevaVentana.Show();
                     this.Close();
@@ -66,8 +70,12 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
                 DataSet datosObtenidos = new DataSet(); //Almacen de los datos que se obtengan en la consulta
                 NpgsqlDataAdapter datosInventario = new NpgsqlDataAdapter(Utilitaria.Utilitaria.consultaInventario, Utilitaria.ConexionBD.conectarBD()); //Ejecución de la consulta
                 datosInventario.Fill(datosObtenidos); // Volcado de los datos en el almacen de datos
-                for (int i = 0; i < datosObtenidos.Tables[0].Rows.Count; i++)     
-                    LB_Inventario.Items.Add(datosObtenidos.Tables[0].Rows[i][0].ToString()); // Mostrar los datos en el lb
+                for (int i = 0; i < datosObtenidos.Tables[0].Rows.Count; i++)
+                {
+                    LB_Inventario.Items.Add("Productos: " + datosObtenidos.Tables[0].Rows[i][0].ToString() + ". Cantidad: " + datosObtenidos.Tables[0].Rows[i][1].ToString()); // Mostrar los datos en el lb
+                    nombreProductos.Add(datosObtenidos.Tables[0].Rows[i][0].ToString());
+                    
+                }
                 
                 Utilitaria.ConexionBD.conectarBD().Close(); //Cierro conexión
             }
@@ -76,6 +84,16 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
                 string exepcion = e.ToString();
                 MessageBox.Show("No tiene productos registrados en el inventario", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private int idProductoInventario() 
+        {
+            Utilitaria.ConexionBD.conectarBD().Open(); //Abro conexión
+            DataSet datosObtenidos = new DataSet(); //Almacen de los datos que se obtengan en la consulta
+            NpgsqlDataAdapter datosListaEspera = new NpgsqlDataAdapter(Utilitaria.Utilitaria.consultaIdProducto(nombreProductos[LB_Inventario.SelectedIndex]), Utilitaria.ConexionBD.conectarBD()); //Ejecución de la consulta
+            datosListaEspera.Fill(datosObtenidos); // Volcado de los datos en el almacen de datos
+            Utilitaria.ConexionBD.conectarBD().Close(); //Cierro conexión
+            return Convert.ToInt32(datosObtenidos.Tables[0].Rows[0][0].ToString());
         }
 
     }
