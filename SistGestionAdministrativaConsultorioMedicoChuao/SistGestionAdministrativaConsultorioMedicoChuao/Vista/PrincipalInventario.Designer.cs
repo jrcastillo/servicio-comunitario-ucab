@@ -115,6 +115,7 @@
             this.B_Modificar.Size = new System.Drawing.Size(97, 59);
             this.B_Modificar.TabIndex = 8;
             this.B_Modificar.UseVisualStyleBackColor = true;
+            this.B_Modificar.Click += new System.EventHandler(this.B_Modificar_Click);
             // 
             // B_Salir
             // 

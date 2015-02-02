@@ -84,6 +84,12 @@
     <Compile Include="Vista\ElegirTerapeuta.Designer.cs">
       <DependentUpon>ElegirTerapeuta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\ModificarProductoInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ModificarProductoInventario.Designer.cs">
+      <DependentUpon>ModificarProductoInventario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\PrincipalInventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,12 @@
     </Compile>
     <Compile Include="Vista\PrincipalMensajes.Designer.cs">
       <DependentUpon>PrincipalMensajes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\ReduccionProductoInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ReduccionProductoInventario.Designer.cs">
+      <DependentUpon>ReduccionProductoInventario.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\TipoEliminacionProducto.cs">
       <SubType>Form</SubType>
@@ -147,6 +159,9 @@
     <EmbeddedResource Include="Vista\ElegirTerapeuta.resx">
       <DependentUpon>ElegirTerapeuta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ModificarProductoInventario.resx">
+      <DependentUpon>ModificarProductoInventario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\PrincipalInventario.resx">
       <DependentUpon>PrincipalInventario.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\PrincipalMensajes.resx">
       <DependentUpon>PrincipalMensajes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ReduccionProductoInventario.resx">
+      <DependentUpon>ReduccionProductoInventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\TipoEliminacionProducto.resx">
       <DependentUpon>TipoEliminacionProducto.cs</DependentUpon>

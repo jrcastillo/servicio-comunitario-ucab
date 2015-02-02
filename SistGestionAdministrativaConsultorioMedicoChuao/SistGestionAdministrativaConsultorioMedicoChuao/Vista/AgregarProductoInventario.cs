@@ -110,7 +110,7 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
                 NpgsqlConnection conexion = new NpgsqlConnection(Utilitaria.ConexionBD.cadenaConexion);
                 conexion.Open();// Abro la conexión
                 NpgsqlCommand GuardarProducto = conexion.CreateCommand();
-                GuardarProducto.CommandText = Utilitaria.Utilitaria.modificarProductoInventario(cantidad, idProducto());
+                GuardarProducto.CommandText = Utilitaria.Utilitaria.agregarProductoInventario(cantidad, idProducto());
                 GuardarProducto.ExecuteNonQuery();
                 conexion.Close(); //Cierro conexión
                 MessageBox.Show("Producto agregado con exito", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);

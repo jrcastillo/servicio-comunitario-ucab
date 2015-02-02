@@ -14,11 +14,14 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
     public partial class PrincipalInventario : Form
     {
         List<string> nombreProductos = new List<string>();
+        List<int> cantidadProductos = new List<int>();
 
         public PrincipalInventario()
         {
             InitializeComponent();
+            Utilitaria.Utilitaria.reiniciarCantidadProductoInventario();
             Utilitaria.Utilitaria.reiniciarIdentificadorProductoInventario();
+            Utilitaria.Utilitaria.reiniciarNombreProductoSeleccionado();
             cargarInventario();
         }
 
@@ -43,7 +46,9 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
                 DialogResult resultado = MessageBox.Show("¿Seguro que desea ir a la ventana de gestion de eliminación de productos?", "Confirmación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (resultado == DialogResult.OK)
                 {
-                    Utilitaria.Utilitaria.agregarValorIdentificadorProductoInventario(idProductoInventario());
+                        Utilitaria.Utilitaria.agregarValorIdentificadorProductoInventario(idProductoInventario());
+                        Utilitaria.Utilitaria.agregarCantidadProductoInventario(cantidadProductos[LB_Inventario.SelectedIndex]);
+                        Utilitaria.Utilitaria.agregarValorNombreProductoSeleccionado(nombreProductos[LB_Inventario.SelectedIndex]);
                     SistGestionAdministrativaConsultorioMedicoChuao.Vista.TipoEliminacionProducto nuevaVentana = new SistGestionAdministrativaConsultorioMedicoChuao.Vista.TipoEliminacionProducto();
                     nuevaVentana.Show();
                     this.Close();
@@ -74,7 +79,7 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
                 {
                     LB_Inventario.Items.Add("Productos: " + datosObtenidos.Tables[0].Rows[i][0].ToString() + ". Cantidad: " + datosObtenidos.Tables[0].Rows[i][1].ToString()); // Mostrar los datos en el lb
                     nombreProductos.Add(datosObtenidos.Tables[0].Rows[i][0].ToString());
-                    
+                    cantidadProductos.Add(Convert.ToInt32(datosObtenidos.Tables[0].Rows[i][1].ToString()));                   
                 }
                 
                 Utilitaria.ConexionBD.conectarBD().Close(); //Cierro conexión
@@ -95,6 +100,27 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
             Utilitaria.ConexionBD.conectarBD().Close(); //Cierro conexión
             return Convert.ToInt32(datosObtenidos.Tables[0].Rows[0][0].ToString());
         }
+
+        private void B_Modificar_Click(object sender, EventArgs e)
+        {
+            int seleccionado = LB_Inventario.SelectedIndex;
+            if (seleccionado == -1)
+                MessageBox.Show("Primero debe seleccionar un registro", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else
+            {
+                DialogResult resultado = MessageBox.Show("¿Seguro que desea ir a la ventana de modificación del producto?", "Confirmación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (resultado == DialogResult.OK)
+                {
+                        Utilitaria.Utilitaria.agregarValorIdentificadorProductoInventario(idProductoInventario());
+                        Utilitaria.Utilitaria.agregarCantidadProductoInventario(cantidadProductos[LB_Inventario.SelectedIndex]);
+                        Utilitaria.Utilitaria.agregarValorNombreProductoSeleccionado(nombreProductos[LB_Inventario.SelectedIndex]);
+                    SistGestionAdministrativaConsultorioMedicoChuao.Vista.ModificarProductoInventario nuevaVentana = new SistGestionAdministrativaConsultorioMedicoChuao.Vista.ModificarProductoInventario();
+                    nuevaVentana.Show();
+                    this.Close();
+                }
+            }
+        }
+
 
     }
 }

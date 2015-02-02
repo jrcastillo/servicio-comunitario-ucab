@@ -151,7 +151,8 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
             }
             catch (Exception exp)
             {
-                MessageBox.Show(exp.ToString());
+                string exepcion = exp.ToString();
+                MessageBox.Show("No se pudo borrar el registro, intentelo luego", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

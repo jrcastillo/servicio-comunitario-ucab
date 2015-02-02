@@ -9,6 +9,7 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Utilitaria
 {
     static class Utilitaria
     {
+        public static string nombreProductoSeleccionado = "";
         public static int identificadorOpcion = 0;
         public static int identificadorTerapeuta = 0;
         public static int identificadorRegistroListaEspera = 0;
@@ -16,6 +17,7 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Utilitaria
         public static int identificadorProductoInventario = 0;
         public static int banderaUpdateMensaje = 0;
         public static int banderaUpdateRegistroListaEspera = 0;
+        public static int cantidadProductoInventario = 0;
         public static string consultaProductosInventario = "select nombre as Producto from \"Inventario\" order by id;";
         public static string consultaTerapeutas = "select nombre ||', '|| apellido ||' ('|| cargo ||').' as Persona, id as Identificador from \"Terapeuta\" order by Persona;";
         public static string consultaInventario = "select nombre, cantidad from \"Inventario\" order by nombre;";
@@ -63,6 +65,10 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Utilitaria
         {
             return "DELETE FROM \"Mensaje\" WHERE id="+ idMensaje +";";
         }
+        public static string borrarProducto(int idProducto)
+        {
+            return "DELETE FROM \"Inventario\" WHERE id=" + idProducto + ";";
+        }
         public static string borrarRegistroListaEspera(int idRegistroListaEspera)
         {
             return "DELETE FROM \"ListaEspera\" WHERE id=" + idRegistroListaEspera + ";";
@@ -71,9 +77,17 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Utilitaria
         {
             return "UPDATE \"Mensaje\" SET titulo='"+titulo+"', detalles='"+detalles+"' WHERE id="+idMensaje+";";
         }
-        public static string modificarProductoInventario(int cantidadNueva, int idProducto)
+        public static string modificarProductoInventario(string nombre, int cantidad, int idProducto)
+        {
+            return "UPDATE \"Inventario\" SET nombre='" + nombre + "', cantidad='" + cantidad + "' WHERE id=" + idProducto + ";";
+        }
+        public static string agregarProductoInventario(int cantidadNueva, int idProducto)
         {
             return "UPDATE \"Inventario\" SET cantidad=cantidad+" + cantidadNueva + " WHERE id=" + idProducto + ";";
+        }
+        public static string disminuirProductoInventario(int cantidadNueva, int idProducto)
+        {
+            return "UPDATE \"Inventario\" SET cantidad=cantidad-" + cantidadNueva + " WHERE id=" + idProducto + ";";
         }
         public static string modificarRegistroListaEspera(string nombrePaciente, string nombreRepresentante, string telefono, string telefonoOpcional, string referidoPor, string detallesReferencia, int idRegistro)
         {
@@ -99,6 +113,16 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Utilitaria
             identificadorRegistroListaEspera = 0;
         }
 
+
+        public static int agregarCantidadProductoInventario(int valor)
+        {
+            return cantidadProductoInventario = valor;
+        }
+
+        public static void reiniciarCantidadProductoInventario()
+        {
+            cantidadProductoInventario = 0;
+        }
 
         public static int agregarValorIdentificadorProductoInventario(int valor)
         {
@@ -154,6 +178,16 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Utilitaria
         public static int agregarValorIdentificadorMensaje(int valor)
         {
             return identificadorMensaje = valor;
+        }
+
+        public static void reiniciarNombreProductoSeleccionado()
+        {
+            nombreProductoSeleccionado = "";
+        }
+
+        public static string agregarValorNombreProductoSeleccionado(string valor)
+        {
+            return nombreProductoSeleccionado = valor;
         }
 
         public static string diaSemana (int dia)

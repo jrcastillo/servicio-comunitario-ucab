@@ -137,7 +137,8 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
             }
             catch (Exception exp)
             {
-                MessageBox.Show(exp.ToString());
+                string excepcion = exp.ToString();
+                MessageBox.Show("El mensaje no pudo ser modificado, intente luego", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
