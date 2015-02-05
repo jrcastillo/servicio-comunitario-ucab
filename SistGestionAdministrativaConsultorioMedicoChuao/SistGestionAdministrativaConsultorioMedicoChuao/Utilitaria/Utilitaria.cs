@@ -25,6 +25,10 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Utilitaria
         {
             return "select nombre ||', '|| apellido ||' ('|| cargo ||').' as Persona from \"Terapeuta\" where id = "+idTerapeuta+"order by Persona;";
         }
+        public static string consultaCargoTerapeuta(int idTerapeuta)
+        {
+            return "select cargo from \"Terapeuta\" where id = " + idTerapeuta + ";";
+        }
         public static string consultaListaEspera(int idTerapeuta)
         { 
             return "SELECT \"nombreApellidoPaciente\", \"nombreApellidoRepresentante\",\"numeroTelefono\", \"numeroOpcional\", \"referidoPor\", \"detallesReferencia\", id FROM \"ListaEspera\" WHERE fk_terapeuta ="+idTerapeuta+" order by id;";

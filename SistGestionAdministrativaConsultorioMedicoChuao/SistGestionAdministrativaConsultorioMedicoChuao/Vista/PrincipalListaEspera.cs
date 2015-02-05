@@ -19,6 +19,7 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
             datosListaEspera();
             Utilitaria.Utilitaria.reiniciarBanderaUpdateRegistroListaEspera();
             Utilitaria.Utilitaria.reiniciarIdentificadorRegistroListaEspera();
+            nombreCargoTerapeuta();
         }
  
         private void datosListaEspera()
@@ -83,7 +84,6 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
             NpgsqlDataAdapter datosListaEspera = new NpgsqlDataAdapter(Utilitaria.Utilitaria.consultaIdItemListaEspera(Utilitaria.Utilitaria.identificadorTerapeuta), Utilitaria.ConexionBD.conectarBD()); //Ejecución de la consulta
             datosListaEspera.Fill(datosObtenidos); // Volcado de los datos en el almacen de datos
             Utilitaria.ConexionBD.conectarBD().Close(); //Cierro conexión
-            MessageBox.Show(LB_ListaEspera.SelectedIndex.ToString());
             return datosObtenidos.Tables[0].Rows[LB_ListaEspera.SelectedIndex][0].ToString();
         }
         
@@ -164,6 +164,26 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
                 SistGestionAdministrativaConsultorioMedicoChuao.Vista.ComposicionRegistroListaEspera nuevaVentana = new SistGestionAdministrativaConsultorioMedicoChuao.Vista.ComposicionRegistroListaEspera();
                 nuevaVentana.Show();
                 this.Close();
+            }
+        }
+
+        private void nombreCargoTerapeuta()
+        {
+            try
+            {
+                Utilitaria.ConexionBD.conectarBD().Open(); //Abro conexión
+                DataSet datosObtenidos = new DataSet(); //Almacen de los datos que se obtengan en la consulta
+                NpgsqlDataAdapter datosTerapeuta = new NpgsqlDataAdapter(Utilitaria.Utilitaria.consultaNombreTerapeuta(Utilitaria.Utilitaria.identificadorTerapeuta), Utilitaria.ConexionBD.conectarBD()); //Ejecución de la consulta
+                datosTerapeuta.Fill(datosObtenidos); // Volcado de los datos en el almacen de datos
+                for (int i = 0; i < datosObtenidos.Tables[0].Rows.Count; i++)
+                {
+                    L_NombreTerapeuta.Text = "Lista de espera de: " + datosObtenidos.Tables[0].Rows[i][0].ToString();
+                }
+                Utilitaria.ConexionBD.conectarBD().Close(); //Cierro conexión
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
             }
         }
 

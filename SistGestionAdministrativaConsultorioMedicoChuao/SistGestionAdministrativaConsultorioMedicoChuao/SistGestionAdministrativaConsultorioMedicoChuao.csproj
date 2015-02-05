@@ -84,6 +84,18 @@
     <Compile Include="Vista\ElegirTerapeuta.Designer.cs">
       <DependentUpon>ElegirTerapeuta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\EntrevistaFisioTerapia\DatosPersonalesFisio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\EntrevistaFisioTerapia\DatosPersonalesFisio.Designer.cs">
+      <DependentUpon>DatosPersonalesFisio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\EntrevistaTerapiaDeLenguaje\DatosPersonales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\EntrevistaTerapiaDeLenguaje\DatosPersonales.Designer.cs">
+      <DependentUpon>DatosPersonales.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\ModificarProductoInventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +170,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\ElegirTerapeuta.resx">
       <DependentUpon>ElegirTerapeuta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\EntrevistaFisioTerapia\DatosPersonalesFisio.resx">
+      <DependentUpon>DatosPersonalesFisio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\EntrevistaTerapiaDeLenguaje\DatosPersonales.resx">
+      <DependentUpon>DatosPersonales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\ModificarProductoInventario.resx">
       <DependentUpon>ModificarProductoInventario.cs</DependentUpon>

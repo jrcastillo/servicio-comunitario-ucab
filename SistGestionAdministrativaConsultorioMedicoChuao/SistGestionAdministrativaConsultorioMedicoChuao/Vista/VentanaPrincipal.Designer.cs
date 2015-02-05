@@ -220,6 +220,7 @@
             this.B_Inscripcion.Size = new System.Drawing.Size(248, 223);
             this.B_Inscripcion.TabIndex = 4;
             this.B_Inscripcion.UseVisualStyleBackColor = false;
+            this.B_Inscripcion.Click += new System.EventHandler(this.B_Inscripcion_Click);
             // 
             // B_BuscarPaciente
             // 

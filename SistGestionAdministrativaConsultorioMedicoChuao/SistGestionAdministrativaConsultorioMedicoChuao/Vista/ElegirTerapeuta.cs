@@ -36,7 +36,32 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
             if (e.ColumnIndex == 1)
             {
                 Utilitaria.Utilitaria.agregarValorIdentificadorTerapeuta(Convert.ToInt32(DGV_ElegirTerapeuta.Rows[e.RowIndex].Cells[2].Value.ToString()));
-              
+
+                    if (Utilitaria.Utilitaria.identificadorOpcion == 1)
+                    {
+                        string cargo = cargoTerapeuta(Utilitaria.Utilitaria.identificadorTerapeuta);
+                        // hacer la consulta para saber cargo y dirigir a donde debe
+                        switch (cargo)
+                        {
+                            case "Fisioterapeuta":
+                                {
+                                    SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioTerapia.DatosPersonalesFisio ventanaFisio = new SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioTerapia.DatosPersonalesFisio();
+                                    ventanaFisio.Show();
+                                    this.Close();
+                                    break;
+                                }
+                            case "Terapeuta de lenguaje":
+                                {
+                                    SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaTerapiaDeLenguaje.DatosPersonales ventanaLenguaje = new SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaTerapiaDeLenguaje.DatosPersonales();
+                                    ventanaLenguaje.Show();
+                                    this.Close();
+                                    break;
+                                }
+                            default:
+                                break;
+                        }
+                    }
+
                     if (Utilitaria.Utilitaria.identificadorOpcion == 2)
                     { 
                     }
@@ -81,8 +106,32 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.ToString());
+                string excepcion = e.ToString();
+                MessageBox.Show("Se ha producido un error, intente más tarde", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             }
+        }
+
+        private string cargoTerapeuta(int idTerapeuta)
+        {
+            string cargo = "";
+
+            try
+            {
+                Utilitaria.ConexionBD.conectarBD().Open(); //Abro conexión
+                DataSet datosObtenidos = new DataSet(); //Almacen de los datos que se obtengan en la consulta
+                NpgsqlDataAdapter datosTerapeutas = new NpgsqlDataAdapter(Utilitaria.Utilitaria.consultaCargoTerapeuta(idTerapeuta), Utilitaria.ConexionBD.conectarBD()); //Ejecución de la consulta
+                datosTerapeutas.Fill(datosObtenidos); // Volcado de los datos en el almacen de datos
+                    cargo = datosObtenidos.Tables[0].Rows[0][0].ToString();
+                Utilitaria.ConexionBD.conectarBD().Close(); //Cierro conexión
+            }
+            catch (Exception e)
+            {
+                string excepcion = e.ToString();
+                MessageBox.Show("Se ha producido un error, intente más tarde", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            return cargo;
         }
 
     }

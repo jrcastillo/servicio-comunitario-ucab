@@ -38,6 +38,7 @@
             this.B_Agregar = new System.Windows.Forms.Button();
             this.B_Salir = new System.Windows.Forms.Button();
             this.LB_ListaEspera = new System.Windows.Forms.ListBox();
+            this.L_NombreTerapeuta = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // B_Modificar
@@ -49,7 +50,7 @@
             this.B_Modificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.B_Modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.B_Modificar.Image = global::SistGestionAdministrativaConsultorioMedicoChuao.Properties.Resources.Modificar;
-            this.B_Modificar.Location = new System.Drawing.Point(503, 480);
+            this.B_Modificar.Location = new System.Drawing.Point(503, 526);
             this.B_Modificar.Name = "B_Modificar";
             this.B_Modificar.Size = new System.Drawing.Size(75, 66);
             this.B_Modificar.TabIndex = 1;
@@ -75,7 +76,7 @@
             this.B_Borrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.B_Borrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.B_Borrar.Image = global::SistGestionAdministrativaConsultorioMedicoChuao.Properties.Resources.Borrar;
-            this.B_Borrar.Location = new System.Drawing.Point(711, 480);
+            this.B_Borrar.Location = new System.Drawing.Point(711, 526);
             this.B_Borrar.Name = "B_Borrar";
             this.B_Borrar.Size = new System.Drawing.Size(75, 66);
             this.B_Borrar.TabIndex = 5;
@@ -86,7 +87,7 @@
             // 
             this.L_Salir.AutoSize = true;
             this.L_Salir.Font = new System.Drawing.Font("Calisto MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_Salir.Location = new System.Drawing.Point(923, 549);
+            this.L_Salir.Location = new System.Drawing.Point(923, 595);
             this.L_Salir.Name = "L_Salir";
             this.L_Salir.Size = new System.Drawing.Size(55, 18);
             this.L_Salir.TabIndex = 6;
@@ -96,7 +97,7 @@
             // 
             this.L_Borrar.AutoSize = true;
             this.L_Borrar.Font = new System.Drawing.Font("Calisto MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_Borrar.Location = new System.Drawing.Point(672, 549);
+            this.L_Borrar.Location = new System.Drawing.Point(672, 595);
             this.L_Borrar.Name = "L_Borrar";
             this.L_Borrar.Size = new System.Drawing.Size(163, 18);
             this.L_Borrar.TabIndex = 7;
@@ -106,7 +107,7 @@
             // 
             this.L_Agregar.AutoSize = true;
             this.L_Agregar.Font = new System.Drawing.Font("Calisto MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_Agregar.Location = new System.Drawing.Point(235, 549);
+            this.L_Agregar.Location = new System.Drawing.Point(235, 595);
             this.L_Agregar.Name = "L_Agregar";
             this.L_Agregar.Size = new System.Drawing.Size(177, 18);
             this.L_Agregar.TabIndex = 8;
@@ -116,7 +117,7 @@
             // 
             this.L_Modificar.AutoSize = true;
             this.L_Modificar.Font = new System.Drawing.Font("Calisto MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_Modificar.Location = new System.Drawing.Point(447, 549);
+            this.L_Modificar.Location = new System.Drawing.Point(447, 595);
             this.L_Modificar.Name = "L_Modificar";
             this.L_Modificar.Size = new System.Drawing.Size(190, 18);
             this.L_Modificar.TabIndex = 10;
@@ -131,7 +132,7 @@
             this.B_Agregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.B_Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.B_Agregar.Image = global::SistGestionAdministrativaConsultorioMedicoChuao.Properties.Resources.NuevoListaEspera;
-            this.B_Agregar.Location = new System.Drawing.Point(286, 480);
+            this.B_Agregar.Location = new System.Drawing.Point(286, 526);
             this.B_Agregar.Name = "B_Agregar";
             this.B_Agregar.Size = new System.Drawing.Size(75, 66);
             this.B_Agregar.TabIndex = 9;
@@ -147,7 +148,7 @@
             this.B_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.B_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.B_Salir.Image = global::SistGestionAdministrativaConsultorioMedicoChuao.Properties.Resources.Cancelar;
-            this.B_Salir.Location = new System.Drawing.Point(911, 480);
+            this.B_Salir.Location = new System.Drawing.Point(911, 526);
             this.B_Salir.Name = "B_Salir";
             this.B_Salir.Size = new System.Drawing.Size(75, 66);
             this.B_Salir.TabIndex = 4;
@@ -161,18 +162,28 @@
             this.LB_ListaEspera.FormattingEnabled = true;
             this.LB_ListaEspera.HorizontalScrollbar = true;
             this.LB_ListaEspera.ItemHeight = 19;
-            this.LB_ListaEspera.Location = new System.Drawing.Point(13, 52);
+            this.LB_ListaEspera.Location = new System.Drawing.Point(13, 98);
             this.LB_ListaEspera.Name = "LB_ListaEspera";
             this.LB_ListaEspera.Size = new System.Drawing.Size(1233, 422);
             this.LB_ListaEspera.TabIndex = 2;
+            // 
+            // L_NombreTerapeuta
+            // 
+            this.L_NombreTerapeuta.AutoSize = true;
+            this.L_NombreTerapeuta.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_NombreTerapeuta.Location = new System.Drawing.Point(9, 61);
+            this.L_NombreTerapeuta.Name = "L_NombreTerapeuta";
+            this.L_NombreTerapeuta.Size = new System.Drawing.Size(0, 22);
+            this.L_NombreTerapeuta.TabIndex = 11;
             // 
             // PrincipalListaEspera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.ClientSize = new System.Drawing.Size(1258, 576);
+            this.ClientSize = new System.Drawing.Size(1258, 620);
             this.ControlBox = false;
+            this.Controls.Add(this.L_NombreTerapeuta);
             this.Controls.Add(this.L_Modificar);
             this.Controls.Add(this.B_Agregar);
             this.Controls.Add(this.L_Agregar);
@@ -203,5 +214,6 @@
         private System.Windows.Forms.Button B_Agregar;
         private System.Windows.Forms.Label L_Modificar;
         private System.Windows.Forms.ListBox LB_ListaEspera;
+        private System.Windows.Forms.Label L_NombreTerapeuta;
     }
 }

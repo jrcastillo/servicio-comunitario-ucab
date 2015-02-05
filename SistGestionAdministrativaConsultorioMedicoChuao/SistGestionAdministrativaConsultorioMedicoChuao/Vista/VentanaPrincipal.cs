@@ -69,5 +69,13 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao
             this.Hide();  
         }
 
+        private void B_Inscripcion_Click(object sender, EventArgs e)
+        {
+            Utilitaria.Utilitaria.agregarValorIdentificadorOpcion(1);
+            SistGestionAdministrativaConsultorioMedicoChuao.Vista.ElegirTerapeuta nuevaVentana = new SistGestionAdministrativaConsultorioMedicoChuao.Vista.ElegirTerapeuta();
+            nuevaVentana.Show();
+            this.Hide(); 
+        }
+
     }
 }
