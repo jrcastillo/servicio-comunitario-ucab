@@ -40,12 +40,12 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
                     if (Utilitaria.Utilitaria.identificadorOpcion == 1)
                     {
                         string cargo = cargoTerapeuta(Utilitaria.Utilitaria.identificadorTerapeuta);
-                        // hacer la consulta para saber cargo y dirigir a donde debe
+                       
                         switch (cargo)
                         {
                             case "Fisioterapeuta":
                                 {
-                                    SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioTerapia.DatosPersonalesFisio ventanaFisio = new SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioTerapia.DatosPersonalesFisio();
+                                    SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioTerapia.TB_CorreoPapa ventanaFisio = new SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioTerapia.TB_CorreoPapa();
                                     ventanaFisio.Show();
                                     this.Close();
                                     break;
