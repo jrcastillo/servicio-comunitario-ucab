@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioTerapia
 {
-    public partial class DatosPersonalesFisio : Form
+    public partial class TB_CorreoPapa : Form
     {
-        public DatosPersonalesFisio()
+        public TB_CorreoPapa()
         {
             InitializeComponent();
             setearDatesPickers();
@@ -39,19 +39,18 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioT
             DTP_FechaNacPaciente.MaxDate = DateTime.Today;
         }
 
-        private bool validadCamposObligados() 
-        {
-            bool validos = false;
-            
-            if (DTP_FechaNacPaciente.Value.ToShortDateString() != DateTime.Today.ToShortDateString() && !TB_NombrePaciente.Text.Equals("")
-                && !TB_ApellidoPaciente.Text.Equals("") && !TB_NombreMama.Text.Equals("") && !TB_ApellidoPapa.Text.Equals("") &&
-                !TB_NombrePapa.Text.Equals("") && !TB_ApellidoPapa.Text.Equals("") && (RB_Masculino.Checked || RB_Femenino.Checked))
-                    validos = true;
+        private bool validarCamposObligados() 
+        { 
+            bool valido = false;
 
-            return validos;
-
+            if (DTP_FechaNacPaciente.Value.Date.ToShortDateString() != DateTime.Today.ToShortDateString() && !TB_NombrePaciente.Text.Equals("")
+                && !TB_ApellidoPaciente.Text.Equals("") && !TB_NombreMama.Text.Equals("") && !TB_ApellidoMama.Text.Equals("")
+                && !TB_NombrePapa.Text.Equals("") && !TB_ApellidoPapa.Text.Equals("") && (RB_Masculino.Checked || RB_Femenino.Checked))
+                    valido = true;
+          
+            return valido;
         }
-
+        
         private void RTB_Direccion_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && e.KeyChar != '\b' && e.KeyChar != '.' && e.KeyChar != ','
@@ -64,7 +63,8 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioT
 
         private void TB_NombrePaciente_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && e.KeyChar != '\b')
+            if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && e.KeyChar != '\b' && e.KeyChar != '.' && e.KeyChar != ','
+                && e.KeyChar != '!' && e.KeyChar != '¡' && e.KeyChar != '?' && e.KeyChar != '¿' && e.KeyChar != '#' && e.KeyChar != '*')
             {
                 e.Handled = true;
             }
@@ -72,7 +72,8 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioT
 
         private void TB_ApellidoPaciente_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && e.KeyChar != '\b')
+            if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && e.KeyChar != '\b' && e.KeyChar != '.' && e.KeyChar != ','
+                && e.KeyChar != '!' && e.KeyChar != '¡' && e.KeyChar != '?' && e.KeyChar != '¿' && e.KeyChar != '#' && e.KeyChar != '*')
             {
                 e.Handled = true;
             }
@@ -80,7 +81,8 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioT
 
         private void TB_NombreMama_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && e.KeyChar != '\b')
+            if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && e.KeyChar != '\b' && e.KeyChar != '.' && e.KeyChar != ','
+                && e.KeyChar != '!' && e.KeyChar != '¡' && e.KeyChar != '?' && e.KeyChar != '¿' && e.KeyChar != '#' && e.KeyChar != '*')
             {
                 e.Handled = true;
             }
@@ -88,7 +90,8 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioT
 
         private void TB_ApellidoMama_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && e.KeyChar != '\b')
+            if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && e.KeyChar != '\b' && e.KeyChar != '.' && e.KeyChar != ','
+                && e.KeyChar != '!' && e.KeyChar != '¡' && e.KeyChar != '?' && e.KeyChar != '¿' && e.KeyChar != '#' && e.KeyChar != '*')
             {
                 e.Handled = true;
             }
@@ -96,7 +99,8 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioT
 
         private void TB_NombrePapa_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && e.KeyChar != '\b')
+            if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && e.KeyChar != '\b' && e.KeyChar != '.' && e.KeyChar != ','
+                && e.KeyChar != '!' && e.KeyChar != '¡' && e.KeyChar != '?' && e.KeyChar != '¿' && e.KeyChar != '#' && e.KeyChar != '*')
             {
                 e.Handled = true;
             }
@@ -104,7 +108,8 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioT
 
         private void TB_ApellidoPapa_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && e.KeyChar != '\b')
+            if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && e.KeyChar != '\b' && e.KeyChar != '.' && e.KeyChar != ','
+                && e.KeyChar != '!' && e.KeyChar != '¡' && e.KeyChar != '?' && e.KeyChar != '¿' && e.KeyChar != '#' && e.KeyChar != '*')
             {
                 e.Handled = true;
             }
@@ -112,7 +117,7 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioT
 
         private void TB_CorreoMama_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && e.KeyChar != '\b' && e.KeyChar != '.' && e.KeyChar != '@' 
+            if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && e.KeyChar != '\b' && e.KeyChar != '.' && e.KeyChar != '@' 
                 && e.KeyChar != '-' && e.KeyChar != '_' && !char.IsNumber(e.KeyChar))
             {
                 e.Handled = true;
@@ -169,7 +174,7 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioT
 
         private void TB_CorreoElectronicoPapa_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && e.KeyChar != '\b' && e.KeyChar != '.' && e.KeyChar != '@'
+            if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && e.KeyChar != '\b' && e.KeyChar != '.' && e.KeyChar != '@'
                 && e.KeyChar != '-' && e.KeyChar != '_' && !char.IsNumber(e.KeyChar))
             {
                 e.Handled = true;
@@ -178,31 +183,26 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioT
 
         private void B_Siguiente_Click(object sender, EventArgs e)
         {
-            bool camposObligadosLlenos = validadCamposObligados();
+            bool validoParaSeguir = validarCamposObligados();
 
-            if (camposObligadosLlenos)
+            if (validoParaSeguir)
             {
-                SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioTerapia.ReferenciaEntrevista nuevaVentana = new SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioTerapia.ReferenciaEntrevista();
+                SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioTerapia.DatosReferencia nuevaVentana = new SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioTerapia.DatosReferencia();
                 nuevaVentana.Show();
                 this.Close();
             }
             else
-                mensajesDeValidacion();
-            
+                mensajesValidaciones();
         }
 
-        private void mensajesDeValidacion() 
-        { 
-            //if ( !
-              //  && !TB_ApellidoPaciente.Text.Equals("") && !TB_NombreMama.Text.Equals("") && !TB_ApellidoPapa.Text.Equals("") &&
-                //!TB_NombrePapa.Text.Equals("") && !TB_ApellidoPapa.Text.Equals("") && (RB_Masculino.Checked || RB_Femenino.Checked))
-            
-            if (DTP_FechaNacPaciente.Value.ToShortDateString() == DateTime.Today.ToShortDateString())
+        private void mensajesValidaciones()
+        {              
+            if (DTP_FechaNacPaciente.Value.Date.ToShortDateString() == DateTime.Today.ToShortDateString())
                 MessageBox.Show("Debe asignar la fecha de nacimiento del paciente para poder continuar", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             if (TB_NombrePaciente.Text.Equals(""))
-                MessageBox.Show("Debe colocar el nombre del paciente para poder continuar", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe colocar el nombre paciente para poder continuar", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             if (TB_ApellidoPaciente.Text.Equals(""))
-                MessageBox.Show("Debe colocar el apellido del paciente para poder continuar", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe colocar el apellido paciente para poder continuar", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             if (TB_NombreMama.Text.Equals(""))
                 MessageBox.Show("Debe colocar el nombre de la madre del paciente para poder continuar", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             if (TB_ApellidoMama.Text.Equals(""))
@@ -212,8 +212,7 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioT
             if (TB_ApellidoPapa.Text.Equals(""))
                 MessageBox.Show("Debe colocar el apellido del padre del paciente para poder continuar", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             if (!RB_Masculino.Checked && !RB_Femenino.Checked)
-                MessageBox.Show("Debe elegir el sexo del paciente para poder continuar", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+                MessageBox.Show("Debe asignar el sexo del paciente para poder continuar", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
         
     }

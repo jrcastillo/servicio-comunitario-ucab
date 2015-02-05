@@ -1,6 +1,6 @@
 ﻿namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioTerapia
 {
-    partial class DatosPersonalesFisio
+    partial class TB_CorreoPapa
     {
         /// <summary>
         /// Required designer variable.
@@ -673,7 +673,7 @@
             this.L_DatosPersonales.TabIndex = 66;
             this.L_DatosPersonales.Text = "DATOS PERSONALES";
             // 
-            // DatosPersonalesFisio
+            // TB_CorreoPapa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -740,7 +740,7 @@
             this.Controls.Add(this.B_Siguiente);
             this.Controls.Add(this.B_Cancelar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "DatosPersonalesFisio";
+            this.Name = "TB_CorreoPapa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DatosPersonalesFisio";
             this.ResumeLayout(false);

@@ -45,7 +45,7 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista
                         {
                             case "Fisioterapeuta":
                                 {
-                                    SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioTerapia.TB_CorreoPapa ventanaFisio = new SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioTerapia.TB_CorreoPapa();
+                                    SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioTerapia.DatosPersonalesFisio ventanaFisio = new SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioTerapia.DatosPersonalesFisio();
                                     ventanaFisio.Show();
                                     this.Close();
                                     break;

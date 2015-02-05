@@ -90,6 +90,12 @@
     <Compile Include="Vista\EntrevistaFisioTerapia\DatosPersonalesFisio.Designer.cs">
       <DependentUpon>DatosPersonalesFisio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\EntrevistaFisioTerapia\ReferenciaEntrevista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\EntrevistaFisioTerapia\ReferenciaEntrevista.Designer.cs">
+      <DependentUpon>ReferenciaEntrevista.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\EntrevistaTerapiaDeLenguaje\DatosPersonales.cs">
       <SubType>Form</SubType>
     </Compile>
