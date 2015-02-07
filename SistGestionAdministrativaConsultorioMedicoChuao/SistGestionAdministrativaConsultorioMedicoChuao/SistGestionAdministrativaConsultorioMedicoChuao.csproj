@@ -90,6 +90,12 @@
     <Compile Include="Vista\EntrevistaFisioTerapia\DatosPersonalesFisio.Designer.cs">
       <DependentUpon>DatosPersonalesFisio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\EntrevistaFisioTerapia\Hitos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\EntrevistaFisioTerapia\Hitos.Designer.cs">
+      <DependentUpon>Hitos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\EntrevistaFisioTerapia\ReferenciaEntrevista.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +186,12 @@
     <EmbeddedResource Include="Vista\EntrevistaFisioTerapia\DatosPersonalesFisio.resx">
       <DependentUpon>DatosPersonalesFisio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\EntrevistaFisioTerapia\Hitos.resx">
+      <DependentUpon>Hitos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\EntrevistaFisioTerapia\ReferenciaEntrevista.resx">
+      <DependentUpon>ReferenciaEntrevista.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\EntrevistaTerapiaDeLenguaje\DatosPersonales.resx">
       <DependentUpon>DatosPersonales.cs</DependentUpon>
     </EmbeddedResource>
@@ -242,6 +254,7 @@
     <None Include="Resources\Guardar.png" />
     <None Include="Resources\Borrar.png" />
     <None Include="Resources\Agregar.png" />
+    <None Include="Resources\flechaAnterior.png" />
     <Content Include="Resources\Inscripcion.png" />
     <None Include="Resources\ListaEspera.png" />
   </ItemGroup>

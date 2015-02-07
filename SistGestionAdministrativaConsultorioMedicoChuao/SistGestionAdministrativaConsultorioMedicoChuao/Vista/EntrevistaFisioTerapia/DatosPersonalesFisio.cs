@@ -16,6 +16,7 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioT
         {
             InitializeComponent();
             setearDatesPickers();
+            cargaDatosMama();
         }
 
         private void B_Cancelar_Click(object sender, EventArgs e)
@@ -182,6 +183,7 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioT
 
             if (camposObligadosLlenos)
             {
+                llenaDatosMama();
                 SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioTerapia.ReferenciaEntrevista nuevaVentana = new SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioTerapia.ReferenciaEntrevista();
                 nuevaVentana.Show();
                 this.Close();
@@ -215,6 +217,35 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioT
                 MessageBox.Show("Debe elegir el sexo del paciente para poder continuar", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
         }
-        
+
+        private void llenaDatosMama() 
+        {
+            Utilitaria.Utilitaria.listaDatosMama.Clear();
+            Utilitaria.Utilitaria.listaDatosMama.Add(TB_NombreMama.Text.ToString());
+            Utilitaria.Utilitaria.listaDatosMama.Add(TB_ApellidoMama.Text.ToString());
+            Utilitaria.Utilitaria.listaDatosMama.Add(DTP_FechaNacMama.Value.ToShortDateString());
+            Utilitaria.Utilitaria.listaDatosMama.Add(TB_CedulaMama.Text.ToString());
+            Utilitaria.Utilitaria.listaDatosMama.Add(TB_TelefonoCasaMama.Text.ToString());
+            Utilitaria.Utilitaria.listaDatosMama.Add(TB_TelefonoCelularMama.Text.ToString());
+            Utilitaria.Utilitaria.listaDatosMama.Add(TB_CorreoMama.Text.ToString());
+        }
+
+        private void cargaDatosMama()
+        {
+            try
+            {
+                TB_NombreMama.Text = Utilitaria.Utilitaria.listaDatosMama[0];
+                TB_ApellidoMama.Text = Utilitaria.Utilitaria.listaDatosMama[1];
+                DTP_FechaNacMama.Value = Convert.ToDateTime(Utilitaria.Utilitaria.listaDatosMama[2]);
+                TB_CedulaMama.Text = Utilitaria.Utilitaria.listaDatosMama[3];
+                TB_TelefonoCasaMama.Text = Utilitaria.Utilitaria.listaDatosMama[4];
+                TB_TelefonoCelularMama.Text = Utilitaria.Utilitaria.listaDatosMama[5];
+                TB_CorreoMama.Text = Utilitaria.Utilitaria.listaDatosMama[6];
+            }
+            catch (Exception e)
+            {
+                string exepcion = e.ToString();
+            }
+        }
     }
 }
