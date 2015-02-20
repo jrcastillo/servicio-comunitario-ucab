@@ -16,6 +16,5 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Utilitaria
             {
                 return conexion = new NpgsqlConnection(cadenaConexion);
             }
-        
     }
 }
