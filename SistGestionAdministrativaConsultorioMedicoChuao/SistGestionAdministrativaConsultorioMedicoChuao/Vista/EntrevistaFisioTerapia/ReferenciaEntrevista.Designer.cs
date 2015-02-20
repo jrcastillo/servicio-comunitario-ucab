@@ -82,7 +82,7 @@
             // 
             this.L_TelefonoPediatra.AutoSize = true;
             this.L_TelefonoPediatra.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_TelefonoPediatra.Location = new System.Drawing.Point(399, 130);
+            this.L_TelefonoPediatra.Location = new System.Drawing.Point(400, 130);
             this.L_TelefonoPediatra.Name = "L_TelefonoPediatra";
             this.L_TelefonoPediatra.Size = new System.Drawing.Size(81, 19);
             this.L_TelefonoPediatra.TabIndex = 2;
@@ -197,7 +197,7 @@
             // TB_TelefonoPediatra
             // 
             this.TB_TelefonoPediatra.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TB_TelefonoPediatra.Location = new System.Drawing.Point(484, 126);
+            this.TB_TelefonoPediatra.Location = new System.Drawing.Point(485, 126);
             this.TB_TelefonoPediatra.Name = "TB_TelefonoPediatra";
             this.TB_TelefonoPediatra.Size = new System.Drawing.Size(133, 26);
             this.TB_TelefonoPediatra.TabIndex = 18;
@@ -213,7 +213,7 @@
             // TB_TelefonoNeuroPediatra
             // 
             this.TB_TelefonoNeuroPediatra.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TB_TelefonoNeuroPediatra.Location = new System.Drawing.Point(484, 167);
+            this.TB_TelefonoNeuroPediatra.Location = new System.Drawing.Point(485, 167);
             this.TB_TelefonoNeuroPediatra.Name = "TB_TelefonoNeuroPediatra";
             this.TB_TelefonoNeuroPediatra.Size = new System.Drawing.Size(133, 26);
             this.TB_TelefonoNeuroPediatra.TabIndex = 20;
@@ -222,7 +222,7 @@
             // 
             this.L_TelefonoNeuropediatra.AutoSize = true;
             this.L_TelefonoNeuropediatra.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_TelefonoNeuropediatra.Location = new System.Drawing.Point(399, 170);
+            this.L_TelefonoNeuropediatra.Location = new System.Drawing.Point(400, 170);
             this.L_TelefonoNeuropediatra.Name = "L_TelefonoNeuropediatra";
             this.L_TelefonoNeuropediatra.Size = new System.Drawing.Size(81, 19);
             this.L_TelefonoNeuropediatra.TabIndex = 21;
