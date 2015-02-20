@@ -17,6 +17,8 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioT
             InitializeComponent();
             setearDatesPickers();
             cargaDatosMama();
+            cargaDatosPapa();
+            cargaDatosPaciente();
         }
 
         private void B_Cancelar_Click(object sender, EventArgs e)
@@ -184,6 +186,8 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioT
             if (camposObligadosLlenos)
             {
                 llenaDatosMama();
+                llenaDatosPapa();
+                llenaDatosPaciente();
                 SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioTerapia.ReferenciaEntrevista nuevaVentana = new SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioTerapia.ReferenciaEntrevista();
                 nuevaVentana.Show();
                 this.Close();
@@ -241,6 +245,69 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioT
                 TB_TelefonoCasaMama.Text = Utilitaria.Utilitaria.listaDatosMama[4];
                 TB_TelefonoCelularMama.Text = Utilitaria.Utilitaria.listaDatosMama[5];
                 TB_CorreoMama.Text = Utilitaria.Utilitaria.listaDatosMama[6];
+            }
+            catch (Exception e)
+            {
+                string exepcion = e.ToString();
+            }
+        }
+
+        private void llenaDatosPapa()
+        {
+            Utilitaria.Utilitaria.listaDatosPapa.Clear();
+            Utilitaria.Utilitaria.listaDatosPapa.Add(TB_NombrePapa.Text.ToString());
+            Utilitaria.Utilitaria.listaDatosPapa.Add(TB_ApellidoPapa.Text.ToString());
+            Utilitaria.Utilitaria.listaDatosPapa.Add(DTP_FechaNacPapa.Value.ToShortDateString());
+            Utilitaria.Utilitaria.listaDatosPapa.Add(TB_CedulaPapa.Text.ToString());
+            Utilitaria.Utilitaria.listaDatosPapa.Add(TB_TelefonoCasaPapa.Text.ToString());
+            Utilitaria.Utilitaria.listaDatosPapa.Add(TB_TelefonoCelularPapa.Text.ToString());
+            Utilitaria.Utilitaria.listaDatosPapa.Add(TB_CorreoElectronicoPapa.Text.ToString());
+        }
+
+        private void cargaDatosPapa()
+        {
+            try
+            {
+                TB_NombrePapa.Text = Utilitaria.Utilitaria.listaDatosPapa[0];
+                TB_ApellidoPapa.Text = Utilitaria.Utilitaria.listaDatosPapa[1];
+                DTP_FechaNacPapa.Value = Convert.ToDateTime(Utilitaria.Utilitaria.listaDatosPapa[2]);
+                TB_CedulaPapa.Text = Utilitaria.Utilitaria.listaDatosPapa[3];
+                TB_TelefonoCasaPapa.Text = Utilitaria.Utilitaria.listaDatosPapa[4];
+                TB_TelefonoCelularPapa.Text = Utilitaria.Utilitaria.listaDatosPapa[5];
+                TB_CorreoElectronicoPapa.Text = Utilitaria.Utilitaria.listaDatosPapa[6];
+            }
+            catch (Exception e)
+            {
+                string exepcion = e.ToString();
+            }
+        }
+
+        private void llenaDatosPaciente()
+        {
+            Utilitaria.Utilitaria.listaDatosPacienteFisio.Clear();
+            Utilitaria.Utilitaria.listaDatosPacienteFisio.Add(TB_NombrePaciente.Text.ToString());
+            Utilitaria.Utilitaria.listaDatosPacienteFisio.Add(TB_ApellidoPaciente.Text.ToString());
+            Utilitaria.Utilitaria.listaDatosPacienteFisio.Add(DTP_FechaNacPaciente.Value.ToShortDateString());
+            if (RB_Femenino.Checked)
+                Utilitaria.Utilitaria.listaDatosPacienteFisio.Add("Femenino");
+            else
+                Utilitaria.Utilitaria.listaDatosPacienteFisio.Add("Masculino");
+            Utilitaria.Utilitaria.listaDatosPacienteFisio.Add(RTB_Direccion.Text.ToString());
+        }
+
+        private void cargaDatosPaciente()
+        {
+            try
+            {
+                TB_NombrePaciente.Text = Utilitaria.Utilitaria.listaDatosPacienteFisio[0];
+                TB_ApellidoPaciente.Text = Utilitaria.Utilitaria.listaDatosPacienteFisio[1];
+                DTP_FechaNacPaciente.Value = Convert.ToDateTime(Utilitaria.Utilitaria.listaDatosPacienteFisio[2]);
+                if (Utilitaria.Utilitaria.listaDatosPacienteFisio[3].Equals("Femenino"))
+                    RB_Femenino.Checked = true;
+                else
+                    RB_Masculino.Checked = true;
+                RTB_Direccion.Text = Utilitaria.Utilitaria.listaDatosPacienteFisio[4];
+                
             }
             catch (Exception e)
             {
