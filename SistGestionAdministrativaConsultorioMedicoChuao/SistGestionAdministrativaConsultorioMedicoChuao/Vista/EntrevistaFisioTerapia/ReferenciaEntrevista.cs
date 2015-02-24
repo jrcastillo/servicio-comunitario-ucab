@@ -15,6 +15,7 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioT
         public ReferenciaEntrevista()
         {
             InitializeComponent();
+            cargaDatos();
         }
 
         private void B_Cancelar_Click(object sender, EventArgs e)
@@ -34,6 +35,7 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioT
 
             if (camposValidos)
             {
+                llenaDatos();
                 SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioTerapia.Hitos nuevaVentana = new SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioTerapia.Hitos();
                 nuevaVentana.Show();
                 this.Close();
@@ -89,6 +91,29 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Vista.EntrevistaFisioT
             Utilitaria.Utilitaria.listaReferenciaEntrevista.Add(TB_G.Text.ToString());
             Utilitaria.Utilitaria.listaReferenciaEntrevista.Add(RTB_Terapias.Text.ToString());
             Utilitaria.Utilitaria.listaReferenciaEntrevista.Add(RTB_Medicamentos.Text.ToString());
+        }
+
+        private void cargaDatos()
+        {
+            try
+            {
+                TB_Referido.Text = Utilitaria.Utilitaria.listaReferenciaEntrevista[0];
+                RTB_RazonReferencia.Text = Utilitaria.Utilitaria.listaReferenciaEntrevista[1];
+                TB_NombrePediatra.Text = Utilitaria.Utilitaria.listaReferenciaEntrevista[2];
+                TB_TelefonoPediatra.Text = Utilitaria.Utilitaria.listaReferenciaEntrevista[3];
+                TB_NombreNeuroPediatra.Text = Utilitaria.Utilitaria.listaReferenciaEntrevista[4];
+                TB_TelefonoNeuroPediatra.Text = Utilitaria.Utilitaria.listaReferenciaEntrevista[5];
+                TB_M.Text = Utilitaria.Utilitaria.listaReferenciaEntrevista[6];
+                TB_Cm.Text = Utilitaria.Utilitaria.listaReferenciaEntrevista[7];
+                TB_Kg.Text = Utilitaria.Utilitaria.listaReferenciaEntrevista[8];
+                TB_G.Text = Utilitaria.Utilitaria.listaReferenciaEntrevista[9];
+                RTB_Terapias.Text = Utilitaria.Utilitaria.listaReferenciaEntrevista[10];
+                RTB_Medicamentos.Text = Utilitaria.Utilitaria.listaReferenciaEntrevista[11];
+            }
+            catch (Exception e)
+            {
+                string exepcion = e.ToString();
+            }
         }
         
     }
