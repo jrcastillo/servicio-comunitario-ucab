@@ -154,9 +154,9 @@
             this.L_NombrePediatra.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.L_NombrePediatra.Location = new System.Drawing.Point(12, 130);
             this.L_NombrePediatra.Name = "L_NombrePediatra";
-            this.L_NombrePediatra.Size = new System.Drawing.Size(179, 19);
+            this.L_NombrePediatra.Size = new System.Drawing.Size(169, 19);
             this.L_NombrePediatra.TabIndex = 10;
-            this.L_NombrePediatra.Text = "Noombre del pediatra:";
+            this.L_NombrePediatra.Text = "Nombre del pediatra:";
             // 
             // L_Terapias
             // 
@@ -368,6 +368,7 @@
             // 
             // RTB_RazonReferencia
             // 
+            this.RTB_RazonReferencia.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RTB_RazonReferencia.Location = new System.Drawing.Point(646, 87);
             this.RTB_RazonReferencia.Name = "RTB_RazonReferencia";
             this.RTB_RazonReferencia.Size = new System.Drawing.Size(336, 224);

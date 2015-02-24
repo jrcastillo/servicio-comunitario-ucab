@@ -13,7 +13,7 @@ namespace SistGestionAdministrativaConsultorioMedicoChuao.Utilitaria
         public static List<string> listaDatosPacienteLenguaje = new List<string>();
         public static List<string> listaDatosMama = new List<string>();
         public static List<string> listaDatosPapa = new List<string>();
-        public static List<string> listaVentana2Fisio = new List<string>();
+        public static List<string> listaReferenciaEntrevista = new List<string>();
         public static string nombreProductoSeleccionado = "";
         public static int identificadorOpcion = 0;
         public static int identificadorTerapeuta = 0;
