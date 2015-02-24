@@ -185,6 +185,7 @@
             this.TB_Referido.Name = "TB_Referido";
             this.TB_Referido.Size = new System.Drawing.Size(170, 26);
             this.TB_Referido.TabIndex = 16;
+            this.TB_Referido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_Referido_KeyPress);
             // 
             // TB_NombrePediatra
             // 
@@ -193,6 +194,7 @@
             this.TB_NombrePediatra.Name = "TB_NombrePediatra";
             this.TB_NombrePediatra.Size = new System.Drawing.Size(170, 26);
             this.TB_NombrePediatra.TabIndex = 17;
+            this.TB_NombrePediatra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_NombrePediatra_KeyPress);
             // 
             // TB_TelefonoPediatra
             // 
@@ -201,6 +203,7 @@
             this.TB_TelefonoPediatra.Name = "TB_TelefonoPediatra";
             this.TB_TelefonoPediatra.Size = new System.Drawing.Size(133, 26);
             this.TB_TelefonoPediatra.TabIndex = 18;
+            this.TB_TelefonoPediatra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_TelefonoPediatra_KeyPress);
             // 
             // TB_NombreNeuroPediatra
             // 
@@ -209,6 +212,7 @@
             this.TB_NombreNeuroPediatra.Name = "TB_NombreNeuroPediatra";
             this.TB_NombreNeuroPediatra.Size = new System.Drawing.Size(170, 26);
             this.TB_NombreNeuroPediatra.TabIndex = 19;
+            this.TB_NombreNeuroPediatra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_NombreNeuroPediatra_KeyPress);
             // 
             // TB_TelefonoNeuroPediatra
             // 
@@ -217,6 +221,7 @@
             this.TB_TelefonoNeuroPediatra.Name = "TB_TelefonoNeuroPediatra";
             this.TB_TelefonoNeuroPediatra.Size = new System.Drawing.Size(133, 26);
             this.TB_TelefonoNeuroPediatra.TabIndex = 20;
+            this.TB_TelefonoNeuroPediatra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_TelefonoNeuroPediatra_KeyPress);
             // 
             // L_TelefonoNeuropediatra
             // 
@@ -235,6 +240,7 @@
             this.TB_Kg.Name = "TB_Kg";
             this.TB_Kg.Size = new System.Drawing.Size(47, 26);
             this.TB_Kg.TabIndex = 22;
+            this.TB_Kg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_Kg_KeyPress);
             // 
             // TB_G
             // 
@@ -243,6 +249,7 @@
             this.TB_G.Name = "TB_G";
             this.TB_G.Size = new System.Drawing.Size(47, 26);
             this.TB_G.TabIndex = 25;
+            this.TB_G.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_G_KeyPress);
             // 
             // L_G
             // 
@@ -271,6 +278,7 @@
             this.TB_Cm.Name = "TB_Cm";
             this.TB_Cm.Size = new System.Drawing.Size(47, 26);
             this.TB_Cm.TabIndex = 29;
+            this.TB_Cm.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_Cm_KeyPress);
             // 
             // TB_M
             // 
@@ -279,6 +287,7 @@
             this.TB_M.Name = "TB_M";
             this.TB_M.Size = new System.Drawing.Size(47, 26);
             this.TB_M.TabIndex = 28;
+            this.TB_M.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_M_KeyPress);
             // 
             // L_M
             // 
@@ -312,19 +321,23 @@
             // 
             // RTB_Terapias
             // 
+            this.RTB_Terapias.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RTB_Terapias.Location = new System.Drawing.Point(16, 400);
             this.RTB_Terapias.Name = "RTB_Terapias";
             this.RTB_Terapias.Size = new System.Drawing.Size(465, 181);
             this.RTB_Terapias.TabIndex = 32;
             this.RTB_Terapias.Text = "";
+            this.RTB_Terapias.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RTB_Terapias_KeyPress);
             // 
             // RTB_Medicamentos
             // 
+            this.RTB_Medicamentos.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RTB_Medicamentos.Location = new System.Drawing.Point(509, 400);
             this.RTB_Medicamentos.Name = "RTB_Medicamentos";
             this.RTB_Medicamentos.Size = new System.Drawing.Size(465, 181);
             this.RTB_Medicamentos.TabIndex = 33;
             this.RTB_Medicamentos.Text = "";
+            this.RTB_Medicamentos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RTB_Medicamentos_KeyPress);
             // 
             // L_Cancelar
             // 
@@ -374,6 +387,7 @@
             this.RTB_RazonReferencia.Size = new System.Drawing.Size(336, 224);
             this.RTB_RazonReferencia.TabIndex = 38;
             this.RTB_RazonReferencia.Text = "";
+            this.RTB_RazonReferencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RTB_RazonReferencia_KeyPress);
             // 
             // label7
             // 
