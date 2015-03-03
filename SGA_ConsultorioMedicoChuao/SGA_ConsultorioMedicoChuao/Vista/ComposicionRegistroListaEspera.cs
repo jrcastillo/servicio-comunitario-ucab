@@ -26,7 +26,7 @@ namespace SGA_ConsultorioMedicoChuao.Vista
             if (resultado == DialogResult.OK)
             {
                 Utilitaria.Utilitaria.reiniciarBanderaUpdateRegistroListaEspera();
-                SGA_ConsultorioMedicoChuao.Vista.PrincipalListaEspera nuevaVentana = new SGA_ConsultorioMedicoChuao.Vista.PrincipalListaEspera();
+				SGA_ConsultorioMedicoChuao.Vista.PrincipalListaEspera nuevaVentana = new SGA_ConsultorioMedicoChuao.Vista.PrincipalListaEspera();
                 nuevaVentana.Show();
                 this.Close();
             }
@@ -60,7 +60,7 @@ namespace SGA_ConsultorioMedicoChuao.Vista
                 InsercionRegistro.ExecuteNonQuery();
                 conexion.Close(); //Cierro conexión
                 MessageBox.Show("Registro guardado con exito", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                SGA_ConsultorioMedicoChuao.Vista.PrincipalListaEspera nuevaVentana = new SGA_ConsultorioMedicoChuao.Vista.PrincipalListaEspera();
+				SGA_ConsultorioMedicoChuao.Vista.PrincipalListaEspera nuevaVentana = new SGA_ConsultorioMedicoChuao.Vista.PrincipalListaEspera();
                 nuevaVentana.Show();
                 this.Close();
             }
@@ -89,7 +89,7 @@ namespace SGA_ConsultorioMedicoChuao.Vista
                 ModificarRegistro.ExecuteNonQuery();
                 conexion.Close(); //Cierro conexión
                 MessageBox.Show("Registro modificado con exito", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                SGA_ConsultorioMedicoChuao.Vista.PrincipalListaEspera nuevaVentana = new SGA_ConsultorioMedicoChuao.Vista.PrincipalListaEspera();
+				SGA_ConsultorioMedicoChuao.Vista.PrincipalListaEspera nuevaVentana = new SGA_ConsultorioMedicoChuao.Vista.PrincipalListaEspera();
                 nuevaVentana.Show();
                 this.Close();
             }
