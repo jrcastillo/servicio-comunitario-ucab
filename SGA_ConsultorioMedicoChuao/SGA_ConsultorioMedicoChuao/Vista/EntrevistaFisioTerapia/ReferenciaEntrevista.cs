@@ -56,7 +56,7 @@ namespace SGA_ConsultorioMedicoChuao.Vista.EntrevistaFisioTerapia
         {
             bool valido = false;
 
-            if (!TB_Referido.Text.Equals("") && !RTB_Medicamentos.Text.Equals(""))
+            if (!TB_Referido.Text.Equals("") && !RTB_RazonReferencia.Text.Equals(""))
                 valido = true;
 
             return valido;
