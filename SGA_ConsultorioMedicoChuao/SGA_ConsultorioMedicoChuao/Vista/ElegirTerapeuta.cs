@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SGA_ConsultorioMedicoChuao.Utilitaria;
 using Npgsql;
+using SGA_ConsultorioMedicoChuao.Vista.EntrevistaTerapiaDeLenguaje;
+using SGA_ConsultorioMedicoChuao.Vista.EntrevistaFisioTerapia;
 	
 namespace SGA_ConsultorioMedicoChuao.Vista
 {
@@ -45,14 +47,14 @@ namespace SGA_ConsultorioMedicoChuao.Vista
                         {
                             case "Fisioterapeuta":
                                 {
-                                    SGA_ConsultorioMedicoChuao.Vista.EntrevistaFisioTerapia.DatosPersonalesFisio ventanaFisio = new SGA_ConsultorioMedicoChuao.Vista.EntrevistaFisioTerapia.DatosPersonalesFisio();
+                                    DatosPersonalesFisio ventanaFisio = new DatosPersonalesFisio();
                                     ventanaFisio.Show();
                                     this.Close();
                                     break;
                                 }
                             case "Terapeuta de lenguaje":
                                 {
-                                    SGA_ConsultorioMedicoChuao.Vista.EntrevistaTerapiaDeLenguaje.DatosPersonales ventanaLenguaje = new SGA_ConsultorioMedicoChuao.Vista.EntrevistaTerapiaDeLenguaje.DatosPersonales();
+                                    DatosPersonales ventanaLenguaje = new DatosPersonales();
                                     ventanaLenguaje.Show();
                                     this.Close();
                                     break;
@@ -68,7 +70,7 @@ namespace SGA_ConsultorioMedicoChuao.Vista
 
                     if (Utilitaria.Utilitaria.identificadorOpcion == 3)
                     {
-                        SGA_ConsultorioMedicoChuao.Vista.PrincipalListaEspera nuevaVentana = new SGA_ConsultorioMedicoChuao.Vista.PrincipalListaEspera();
+                        PrincipalListaEspera nuevaVentana = new PrincipalListaEspera();
                         nuevaVentana.Show();
                         this.Close();
                     }
