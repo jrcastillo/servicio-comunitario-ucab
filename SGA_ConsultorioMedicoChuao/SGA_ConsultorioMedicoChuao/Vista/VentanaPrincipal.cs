@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SGA_ConsultorioMedicoChuao.Vista;
 
 namespace SGA_ConsultorioMedicoChuao
 {
@@ -56,7 +57,7 @@ namespace SGA_ConsultorioMedicoChuao
         private void B_Pagos_Click(object sender, EventArgs e)
         {
             Utilitaria.Utilitaria.agregarValorIdentificadorOpcion(6);
-            SGA_ConsultorioMedicoChuao.Vista.ElegirTerapeuta nuevaVentana = new SGA_ConsultorioMedicoChuao.Vista.ElegirTerapeuta();
+            ElegirTerapeuta nuevaVentana = new ElegirTerapeuta();
             nuevaVentana.Show();
             this.Hide();  
         }
@@ -64,7 +65,7 @@ namespace SGA_ConsultorioMedicoChuao
         private void B_Inventario_Click(object sender, EventArgs e)
         {
             Utilitaria.Utilitaria.agregarValorIdentificadorOpcion(7);
-            SGA_ConsultorioMedicoChuao.Vista.PrincipalInventario nuevaVentana = new SGA_ConsultorioMedicoChuao.Vista.PrincipalInventario();
+            PrincipalInventario nuevaVentana = new PrincipalInventario();
             nuevaVentana.Show();
             this.Hide();  
         }
@@ -72,10 +73,18 @@ namespace SGA_ConsultorioMedicoChuao
         private void B_Inscripcion_Click(object sender, EventArgs e)
         {
             Utilitaria.Utilitaria.agregarValorIdentificadorOpcion(1);
-            SGA_ConsultorioMedicoChuao.Vista.ElegirTerapeuta nuevaVentana = new SGA_ConsultorioMedicoChuao.Vista.ElegirTerapeuta();
+            ElegirTerapeuta nuevaVentana = new ElegirTerapeuta();
             nuevaVentana.Show();
             this.Hide(); 
         }
+
+		private void B_Horarios_Click(object sender, EventArgs e)
+		{ 
+			Utilitaria.Utilitaria.agregarValorIdentificadorOpcion(8);
+			PrincipalHorarios nuevaVentana = new PrincipalHorarios();
+			nuevaVentana.Show();
+			this.Hide();
+		}
 
     }
 }

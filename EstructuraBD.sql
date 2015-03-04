@@ -142,7 +142,11 @@ ALTER TABLE "Mensaje"
 CREATE TABLE "Paciente"
 (
   id numeric NOT NULL,
+  nombre text NOT NULL,
+  apellido text NOT NULL,
+  fechanac date NOT NULL,
   CONSTRAINT "Paci_id" PRIMARY KEY (id)
+  
 )
 WITH (
   OIDS=FALSE
@@ -172,7 +176,7 @@ WITH (
 ALTER TABLE "Representante"
   OWNER TO postgres;
 
-REATE TABLE "Servicio"
+CREATE TABLE "Servicio"
 (
   id numeric NOT NULL,
   CONSTRAINT "Serv_id" PRIMARY KEY (id)
