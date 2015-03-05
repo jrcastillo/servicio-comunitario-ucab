@@ -78,6 +78,12 @@
     <Compile Include="Vista\ComposicionRegistroListaEspera.Designer.cs">
       <DependentUpon>ComposicionRegistroListaEspera.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\EntrevistaFisioTerapia\Actividades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\EntrevistaFisioTerapia\Actividades.Designer.cs">
+      <DependentUpon>Actividades.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\PrincipalListaEspera.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\ComposicionRegistroListaEspera.resx">
       <DependentUpon>ComposicionRegistroListaEspera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\EntrevistaFisioTerapia\Actividades.resx">
+      <DependentUpon>Actividades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\PrincipalListaEspera.resx">
       <DependentUpon>PrincipalListaEspera.cs</DependentUpon>
