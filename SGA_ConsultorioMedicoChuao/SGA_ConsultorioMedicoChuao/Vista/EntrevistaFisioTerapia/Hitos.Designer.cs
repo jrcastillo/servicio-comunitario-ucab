@@ -274,6 +274,7 @@
             this.B_Siguiente.Size = new System.Drawing.Size(75, 56);
             this.B_Siguiente.TabIndex = 46;
             this.B_Siguiente.UseVisualStyleBackColor = true;
+            this.B_Siguiente.Click += new System.EventHandler(this.B_Siguiente_Click);
             // 
             // L_SiguientesHitos
             // 
@@ -292,6 +293,7 @@
             this.TB_AñoCC.Name = "TB_AñoCC";
             this.TB_AñoCC.Size = new System.Drawing.Size(65, 26);
             this.TB_AñoCC.TabIndex = 48;
+            this.TB_AñoCC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_AñoCC_KeyPress);
             // 
             // TB_MesCC
             // 
@@ -300,6 +302,7 @@
             this.TB_MesCC.Name = "TB_MesCC";
             this.TB_MesCC.Size = new System.Drawing.Size(65, 26);
             this.TB_MesCC.TabIndex = 49;
+            this.TB_MesCC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_MesCC_KeyPress);
             // 
             // TB_MesRolando
             // 
@@ -308,6 +311,7 @@
             this.TB_MesRolando.Name = "TB_MesRolando";
             this.TB_MesRolando.Size = new System.Drawing.Size(65, 26);
             this.TB_MesRolando.TabIndex = 53;
+            this.TB_MesRolando.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_MesRolando_KeyPress);
             // 
             // TB_AñoRolando
             // 
@@ -316,6 +320,7 @@
             this.TB_AñoRolando.Name = "TB_AñoRolando";
             this.TB_AñoRolando.Size = new System.Drawing.Size(65, 26);
             this.TB_AñoRolando.TabIndex = 52;
+            this.TB_AñoRolando.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_AñoRolando_KeyPress);
             // 
             // L_MesRolando
             // 
@@ -344,6 +349,7 @@
             this.TB_MesVoltearse.Name = "TB_MesVoltearse";
             this.TB_MesVoltearse.Size = new System.Drawing.Size(65, 26);
             this.TB_MesVoltearse.TabIndex = 57;
+            this.TB_MesVoltearse.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_MesVoltearse_KeyPress);
             // 
             // TB_AñoVoltearse
             // 
@@ -352,6 +358,7 @@
             this.TB_AñoVoltearse.Name = "TB_AñoVoltearse";
             this.TB_AñoVoltearse.Size = new System.Drawing.Size(65, 26);
             this.TB_AñoVoltearse.TabIndex = 56;
+            this.TB_AñoVoltearse.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_AñoVoltearse_KeyPress);
             // 
             // L_MesVolteandose
             // 
@@ -380,6 +387,7 @@
             this.TB_MesGatear.Name = "TB_MesGatear";
             this.TB_MesGatear.Size = new System.Drawing.Size(65, 26);
             this.TB_MesGatear.TabIndex = 69;
+            this.TB_MesGatear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_MesGatear_KeyPress);
             // 
             // TB_AñoGatear
             // 
@@ -388,6 +396,7 @@
             this.TB_AñoGatear.Name = "TB_AñoGatear";
             this.TB_AñoGatear.Size = new System.Drawing.Size(65, 26);
             this.TB_AñoGatear.TabIndex = 68;
+            this.TB_AñoGatear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_AñoGatear_KeyPress);
             // 
             // L_MesGatear
             // 
@@ -416,6 +425,7 @@
             this.TB_MesSentarseDesdeAcostado.Name = "TB_MesSentarseDesdeAcostado";
             this.TB_MesSentarseDesdeAcostado.Size = new System.Drawing.Size(65, 26);
             this.TB_MesSentarseDesdeAcostado.TabIndex = 65;
+            this.TB_MesSentarseDesdeAcostado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_MesSentarseDesdeAcostado_KeyPress);
             // 
             // TB_AñoSentarseDesdeAcostado
             // 
@@ -424,6 +434,7 @@
             this.TB_AñoSentarseDesdeAcostado.Name = "TB_AñoSentarseDesdeAcostado";
             this.TB_AñoSentarseDesdeAcostado.Size = new System.Drawing.Size(65, 26);
             this.TB_AñoSentarseDesdeAcostado.TabIndex = 64;
+            this.TB_AñoSentarseDesdeAcostado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_AñoSentarseDesdeAcostado_KeyPress);
             // 
             // L_MesSentarseDesdeAcostado
             // 
@@ -452,6 +463,7 @@
             this.TB_MesSentarse.Name = "TB_MesSentarse";
             this.TB_MesSentarse.Size = new System.Drawing.Size(65, 26);
             this.TB_MesSentarse.TabIndex = 61;
+            this.TB_MesSentarse.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_MesSentarse_KeyPress);
             // 
             // TB_AñoSentarse
             // 
@@ -460,6 +472,7 @@
             this.TB_AñoSentarse.Name = "TB_AñoSentarse";
             this.TB_AñoSentarse.Size = new System.Drawing.Size(65, 26);
             this.TB_AñoSentarse.TabIndex = 60;
+            this.TB_AñoSentarse.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_AñoSentarse_KeyPress);
             // 
             // L_MesSentarse
             // 
@@ -488,6 +501,7 @@
             this.TB_MesEscalon.Name = "TB_MesEscalon";
             this.TB_MesEscalon.Size = new System.Drawing.Size(65, 26);
             this.TB_MesEscalon.TabIndex = 77;
+            this.TB_MesEscalon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_MesEscalon_KeyPress);
             // 
             // TB_AñoEscalon
             // 
@@ -496,6 +510,7 @@
             this.TB_AñoEscalon.Name = "TB_AñoEscalon";
             this.TB_AñoEscalon.Size = new System.Drawing.Size(65, 26);
             this.TB_AñoEscalon.TabIndex = 76;
+            this.TB_AñoEscalon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_AñoEscalon_KeyPress);
             // 
             // L_MesEscalon
             // 
@@ -524,6 +539,7 @@
             this.TB_MesMarcha.Name = "TB_MesMarcha";
             this.TB_MesMarcha.Size = new System.Drawing.Size(65, 26);
             this.TB_MesMarcha.TabIndex = 73;
+            this.TB_MesMarcha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_MesMarcha_KeyPress);
             // 
             // TB_AñoMarcha
             // 
@@ -532,6 +548,7 @@
             this.TB_AñoMarcha.Name = "TB_AñoMarcha";
             this.TB_AñoMarcha.Size = new System.Drawing.Size(65, 26);
             this.TB_AñoMarcha.TabIndex = 72;
+            this.TB_AñoMarcha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_AñoMarcha_KeyPress);
             // 
             // L_MesMarcha
             // 
@@ -570,6 +587,7 @@
             this.TB_MesBipedo.Name = "TB_MesBipedo";
             this.TB_MesBipedo.Size = new System.Drawing.Size(65, 26);
             this.TB_MesBipedo.TabIndex = 82;
+            this.TB_MesBipedo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_MesBipedo_KeyPress);
             // 
             // TB_AñoBipedo
             // 
@@ -578,6 +596,7 @@
             this.TB_AñoBipedo.Name = "TB_AñoBipedo";
             this.TB_AñoBipedo.Size = new System.Drawing.Size(65, 26);
             this.TB_AñoBipedo.TabIndex = 81;
+            this.TB_AñoBipedo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_AñoBipedo_KeyPress);
             // 
             // label1
             // 
@@ -606,6 +625,7 @@
             this.TB_MesCaja.Name = "TB_MesCaja";
             this.TB_MesCaja.Size = new System.Drawing.Size(65, 26);
             this.TB_MesCaja.TabIndex = 87;
+            this.TB_MesCaja.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_MesCaja_KeyPress);
             // 
             // TB_AñoCaja
             // 
@@ -614,6 +634,7 @@
             this.TB_AñoCaja.Name = "TB_AñoCaja";
             this.TB_AñoCaja.Size = new System.Drawing.Size(65, 26);
             this.TB_AñoCaja.TabIndex = 86;
+            this.TB_AñoCaja.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_AñoCaja_KeyPress);
             // 
             // L_MesCaja
             // 
