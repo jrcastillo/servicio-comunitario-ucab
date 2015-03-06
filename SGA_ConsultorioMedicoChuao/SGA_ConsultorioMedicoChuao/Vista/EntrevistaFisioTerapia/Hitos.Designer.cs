@@ -42,9 +42,6 @@
             this.L_Escalon = new System.Windows.Forms.Label();
             this.L_AñoCC = new System.Windows.Forms.Label();
             this.L_MesCC = new System.Windows.Forms.Label();
-            this.B_Anterior = new System.Windows.Forms.Button();
-            this.B_Salir = new System.Windows.Forms.Button();
-            this.B_Siguiente = new System.Windows.Forms.Button();
             this.L_SiguientesHitos = new System.Windows.Forms.Label();
             this.TB_AñoCC = new System.Windows.Forms.TextBox();
             this.TB_MesCC = new System.Windows.Forms.TextBox();
@@ -86,6 +83,9 @@
             this.L_MesCaja = new System.Windows.Forms.Label();
             this.L_AñoCaja = new System.Windows.Forms.Label();
             this.L_Caja = new System.Windows.Forms.Label();
+            this.B_Siguiente = new System.Windows.Forms.Button();
+            this.B_Salir = new System.Windows.Forms.Button();
+            this.B_Anterior = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // L_DesarrolloMotor
@@ -112,7 +112,7 @@
             // 
             this.L_Cancelar.AutoSize = true;
             this.L_Cancelar.Font = new System.Drawing.Font("Calisto MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_Cancelar.Location = new System.Drawing.Point(287, 605);
+            this.L_Cancelar.Location = new System.Drawing.Point(289, 605);
             this.L_Cancelar.Name = "L_Cancelar";
             this.L_Cancelar.Size = new System.Drawing.Size(97, 18);
             this.L_Cancelar.TabIndex = 2;
@@ -227,54 +227,6 @@
             this.L_MesCC.Size = new System.Drawing.Size(74, 19);
             this.L_MesCC.TabIndex = 27;
             this.L_MesCC.Text = "Mes(es):";
-            // 
-            // B_Anterior
-            // 
-            this.B_Anterior.FlatAppearance.BorderColor = System.Drawing.Color.MediumTurquoise;
-            this.B_Anterior.FlatAppearance.BorderSize = 0;
-            this.B_Anterior.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.B_Anterior.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.B_Anterior.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.B_Anterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.B_Anterior.Image = global::SGA_ConsultorioMedicoChuao.Properties.Resources.flechaAnterior;
-            this.B_Anterior.Location = new System.Drawing.Point(7, 543);
-            this.B_Anterior.Name = "B_Anterior";
-            this.B_Anterior.Size = new System.Drawing.Size(75, 56);
-            this.B_Anterior.TabIndex = 44;
-            this.B_Anterior.UseVisualStyleBackColor = true;
-            this.B_Anterior.Click += new System.EventHandler(this.B_Anterior_Click);
-            // 
-            // B_Salir
-            // 
-            this.B_Salir.FlatAppearance.BorderColor = System.Drawing.Color.MediumTurquoise;
-            this.B_Salir.FlatAppearance.BorderSize = 0;
-            this.B_Salir.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.B_Salir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.B_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.B_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.B_Salir.Image = global::SGA_ConsultorioMedicoChuao.Properties.Resources.Cancelar;
-            this.B_Salir.Location = new System.Drawing.Point(299, 543);
-            this.B_Salir.Name = "B_Salir";
-            this.B_Salir.Size = new System.Drawing.Size(75, 56);
-            this.B_Salir.TabIndex = 45;
-            this.B_Salir.UseVisualStyleBackColor = true;
-            this.B_Salir.Click += new System.EventHandler(this.B_Salir_Click);
-            // 
-            // B_Siguiente
-            // 
-            this.B_Siguiente.FlatAppearance.BorderColor = System.Drawing.Color.MediumTurquoise;
-            this.B_Siguiente.FlatAppearance.BorderSize = 0;
-            this.B_Siguiente.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.B_Siguiente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.B_Siguiente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.B_Siguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.B_Siguiente.Image = global::SGA_ConsultorioMedicoChuao.Properties.Resources.flechaSiguiente;
-            this.B_Siguiente.Location = new System.Drawing.Point(578, 543);
-            this.B_Siguiente.Name = "B_Siguiente";
-            this.B_Siguiente.Size = new System.Drawing.Size(75, 56);
-            this.B_Siguiente.TabIndex = 46;
-            this.B_Siguiente.UseVisualStyleBackColor = true;
-            this.B_Siguiente.Click += new System.EventHandler(this.B_Siguiente_Click);
             // 
             // L_SiguientesHitos
             // 
@@ -665,6 +617,54 @@
             this.L_Caja.Size = new System.Drawing.Size(289, 19);
             this.L_Caja.TabIndex = 83;
             this.L_Caja.Text = "* Saler de una caja/ entrar a una caja:";
+            // 
+            // B_Siguiente
+            // 
+            this.B_Siguiente.FlatAppearance.BorderColor = System.Drawing.Color.MediumTurquoise;
+            this.B_Siguiente.FlatAppearance.BorderSize = 0;
+            this.B_Siguiente.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.B_Siguiente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.B_Siguiente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.B_Siguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.B_Siguiente.Image = global::SGA_ConsultorioMedicoChuao.Properties.Resources.flechaSiguiente;
+            this.B_Siguiente.Location = new System.Drawing.Point(578, 543);
+            this.B_Siguiente.Name = "B_Siguiente";
+            this.B_Siguiente.Size = new System.Drawing.Size(75, 56);
+            this.B_Siguiente.TabIndex = 46;
+            this.B_Siguiente.UseVisualStyleBackColor = true;
+            this.B_Siguiente.Click += new System.EventHandler(this.B_Siguiente_Click);
+            // 
+            // B_Salir
+            // 
+            this.B_Salir.FlatAppearance.BorderColor = System.Drawing.Color.MediumTurquoise;
+            this.B_Salir.FlatAppearance.BorderSize = 0;
+            this.B_Salir.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.B_Salir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.B_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.B_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.B_Salir.Image = global::SGA_ConsultorioMedicoChuao.Properties.Resources.Cancelar;
+            this.B_Salir.Location = new System.Drawing.Point(299, 543);
+            this.B_Salir.Name = "B_Salir";
+            this.B_Salir.Size = new System.Drawing.Size(75, 56);
+            this.B_Salir.TabIndex = 45;
+            this.B_Salir.UseVisualStyleBackColor = true;
+            this.B_Salir.Click += new System.EventHandler(this.B_Salir_Click);
+            // 
+            // B_Anterior
+            // 
+            this.B_Anterior.FlatAppearance.BorderColor = System.Drawing.Color.MediumTurquoise;
+            this.B_Anterior.FlatAppearance.BorderSize = 0;
+            this.B_Anterior.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.B_Anterior.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.B_Anterior.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.B_Anterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.B_Anterior.Image = global::SGA_ConsultorioMedicoChuao.Properties.Resources.flechaAnterior;
+            this.B_Anterior.Location = new System.Drawing.Point(7, 543);
+            this.B_Anterior.Name = "B_Anterior";
+            this.B_Anterior.Size = new System.Drawing.Size(75, 56);
+            this.B_Anterior.TabIndex = 44;
+            this.B_Anterior.UseVisualStyleBackColor = true;
+            this.B_Anterior.Click += new System.EventHandler(this.B_Anterior_Click);
             // 
             // Hitos
             // 

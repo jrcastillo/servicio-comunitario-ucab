@@ -15,6 +15,7 @@ namespace SGA_ConsultorioMedicoChuao.Utilitaria
         public static List<string> listaDatosPapa = new List<string>();
         public static List<string> listaReferenciaEntrevista = new List<string>();
         public static List<String> listahitos = new List<string>();
+        public static List<String> listaActividades = new List<string>();
         public static string nombreProductoSeleccionado = "";
         public static int identificadorOpcion = 0;
         public static int identificadorTerapeuta = 0;
