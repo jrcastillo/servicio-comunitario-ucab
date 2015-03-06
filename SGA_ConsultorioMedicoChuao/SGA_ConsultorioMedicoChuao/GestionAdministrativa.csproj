@@ -84,6 +84,12 @@
     <Compile Include="Vista\EntrevistaFisioTerapia\Actividades.Designer.cs">
       <DependentUpon>Actividades.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\EntrevistaFisioTerapia\AntecedentesFisio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\EntrevistaFisioTerapia\AntecedentesFisio.Designer.cs">
+      <DependentUpon>AntecedentesFisio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\PrincipalListaEspera.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\EntrevistaFisioTerapia\Actividades.resx">
       <DependentUpon>Actividades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\EntrevistaFisioTerapia\AntecedentesFisio.resx">
+      <DependentUpon>AntecedentesFisio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\PrincipalListaEspera.resx">
       <DependentUpon>PrincipalListaEspera.cs</DependentUpon>
