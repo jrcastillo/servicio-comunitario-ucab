@@ -72,11 +72,11 @@
             // 
             this.L_EntevistaFisio.AutoSize = true;
             this.L_EntevistaFisio.Font = new System.Drawing.Font("Berlin Sans FB", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_EntevistaFisio.Location = new System.Drawing.Point(283, 9);
+            this.L_EntevistaFisio.Location = new System.Drawing.Point(339, 9);
             this.L_EntevistaFisio.Name = "L_EntevistaFisio";
-            this.L_EntevistaFisio.Size = new System.Drawing.Size(427, 40);
+            this.L_EntevistaFisio.Size = new System.Drawing.Size(328, 40);
             this.L_EntevistaFisio.TabIndex = 0;
-            this.L_EntevistaFisio.Text = "Entrevista Fisioterapeutica";
+            this.L_EntevistaFisio.Text = "Datos de referencias";
             // 
             // L_TelefonoPediatra
             // 
