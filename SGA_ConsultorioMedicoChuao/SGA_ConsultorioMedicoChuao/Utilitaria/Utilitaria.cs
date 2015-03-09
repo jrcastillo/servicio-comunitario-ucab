@@ -16,6 +16,7 @@ namespace SGA_ConsultorioMedicoChuao.Utilitaria
         public static List<string> listaReferenciaEntrevista = new List<string>();
         public static List<String> listahitos = new List<string>();
         public static List<String> listaActividades = new List<string>();
+        public static List<String> listaAntecedentes = new List<string>();
         public static string nombreProductoSeleccionado = "";
         public static int identificadorOpcion = 0;
         public static int identificadorTerapeuta = 0;
@@ -56,9 +57,38 @@ namespace SGA_ConsultorioMedicoChuao.Utilitaria
         {
             return "INSERT INTO \"Mensaje\"(titulo, detalles, fk_terapeuta, \"fechaCreacion\", dia) VALUES ('" + titulo + "', '" + detalles + "', " + idTerapeuta + ", current_timestamp, extract (dow from current_timestamp));";
         }
+        public static string insercionPaciente(List<string> datosPaciente)
+        {
+            return "INSERT INTO \"Paciente\"(nombre, apellido, \"fechaNac\", sexo, direccion) VALUES ('" + datosPaciente[0] + "', '" + datosPaciente[1] + "', '" + datosPaciente[2] + "', '" + datosPaciente[3] + "','"+ datosPaciente[4] + "');";
+        }
+        public static string insercionRepresentante(List<string> datosRepresentante, String tipo)
+        {
+            return "INSERT INTO \"Representante\" (nombre, apellido, fk_hijo, correo, cedula, tipo, \"fechaNac\", telfprincipal, telfsecundario) VALUES ('" + datosRepresentante[0] + "', '" + datosRepresentante[1] + "', currval('id_paciente'::regclass), '" + datosRepresentante[6] + "', '" + datosRepresentante[3] + "','" + tipo + "','" + datosRepresentante[2] + "','" + datosRepresentante[4] + "','" + datosRepresentante[5] + "');";
+        }
         public static string agregarProductoInventario(string nombre)
         {
             return "INSERT INTO \"Inventario\"(nombre, cantidad) VALUES ('" + nombre + "', 0);";
+        }
+        public static string insertarEntrevistaFisio(List<string> listaReferencia, List<string> listaHitos, List<string> listaActividades, List<string> listaAntecedestes)
+        {
+            return "INSERT INTO \"EntrevistaFisio\"(" + 
+            "fk_paciente, referidopor, motivoreferencia, nombrepediatra, " + 
+            "telefonopediatra, nombreneuro, telefononeuro, m, cm, kg, gr, terapiasactuales, medicamentos," +
+            "anocc, mescc, anorolando, mesrolando, anovoltearse, mesvoltearse," +
+            "anosentarse, messentarse, anosentarsedesde, messentarsedesde," +
+            "anogatear, mesgatear, anobipedo, mesbipedo, anomarcha, mesmarcha,"+ 
+            "anosubirescalon, messubirescalon, anosalircaja, messalircaja, "+
+            "difcultadesembarazo, semanasnacimiento, cuidadosespeciales, pesonacer,"+ 
+            "tallanacer, alta, enfermedades, antecedentesmaternos, antecedentespaternos)"+
+            "VALUES (currval('id_paciente'::regclass), '" + listaReferencia[0] + "', '" + listaReferencia[1] + "', '" + listaReferencia[2] + "', " +
+            "'" + listaReferencia[3] + "', '" + listaReferencia[4] + "', '" + listaReferencia[5] + "', '" + listaReferencia[6] + "', '" + listaReferencia[7] + "',"+
+            "'" + listaReferencia[8] + "', '" + listaReferencia[9] + "', '" + listaReferencia[10] + "', '" + listaReferencia[11] + "',"+
+            "'" + listaHitos[0] + "', '" + listaHitos[1] + "', '" + listaHitos[2] + "', '" + listaHitos[3] + "', '" + listaHitos[4] + "', '" + listaHitos[5] + "'," +
+            "'" + listaHitos[6] + "', '" + listaHitos[7] + "', '" + listaHitos[8] + "', '" + listaHitos[9] + "', '" + listaHitos[10] + "', '" + listaHitos[11] + "'," +
+            "'" + listaHitos[12] + "', '" + listaHitos[13] + "', '" + listaHitos[14] + "', '" + listaHitos[15] + "', '" + listaHitos[16] + "', '" + listaHitos[17] + "',"+
+            "'" + listaHitos[18] + "', '" + listaHitos[19] + "','" + listaActividades[0] + "', '" + listaActividades[1] + "', '" + listaActividades[2] + "',"+
+            "'" + listaActividades[3] + "', '" + listaActividades[4] + "', '" + listaActividades[5] + "'," +
+            "'" + listaAntecedentes[0] + "', '" + listaAntecedentes[1] + "', '" + listaAntecedentes[2] + "');";
         }
         public static string insercionRegistroListaEspera(string nombrePaciente, string nombreRepresentante, string telefono, string telefonoOpcional, string referidoPor, string detallesReferencia, int idTerapeuta)
         {

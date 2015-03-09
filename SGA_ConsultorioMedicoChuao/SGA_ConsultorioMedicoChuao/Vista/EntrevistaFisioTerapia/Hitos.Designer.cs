@@ -300,7 +300,7 @@
             this.TB_MesVoltearse.Location = new System.Drawing.Point(513, 192);
             this.TB_MesVoltearse.Name = "TB_MesVoltearse";
             this.TB_MesVoltearse.Size = new System.Drawing.Size(65, 26);
-            this.TB_MesVoltearse.TabIndex = 57;
+            this.TB_MesVoltearse.TabIndex = 55;
             this.TB_MesVoltearse.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_MesVoltearse_KeyPress);
             // 
             // TB_AñoVoltearse
@@ -309,7 +309,7 @@
             this.TB_AñoVoltearse.Location = new System.Drawing.Point(365, 192);
             this.TB_AñoVoltearse.Name = "TB_AñoVoltearse";
             this.TB_AñoVoltearse.Size = new System.Drawing.Size(65, 26);
-            this.TB_AñoVoltearse.TabIndex = 56;
+            this.TB_AñoVoltearse.TabIndex = 54;
             this.TB_AñoVoltearse.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_AñoVoltearse_KeyPress);
             // 
             // L_MesVolteandose
@@ -338,7 +338,7 @@
             this.TB_MesGatear.Location = new System.Drawing.Point(299, 322);
             this.TB_MesGatear.Name = "TB_MesGatear";
             this.TB_MesGatear.Size = new System.Drawing.Size(65, 26);
-            this.TB_MesGatear.TabIndex = 69;
+            this.TB_MesGatear.TabIndex = 61;
             this.TB_MesGatear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_MesGatear_KeyPress);
             // 
             // TB_AñoGatear
@@ -347,7 +347,7 @@
             this.TB_AñoGatear.Location = new System.Drawing.Point(151, 322);
             this.TB_AñoGatear.Name = "TB_AñoGatear";
             this.TB_AñoGatear.Size = new System.Drawing.Size(65, 26);
-            this.TB_AñoGatear.TabIndex = 68;
+            this.TB_AñoGatear.TabIndex = 60;
             this.TB_AñoGatear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_AñoGatear_KeyPress);
             // 
             // L_MesGatear
@@ -376,7 +376,7 @@
             this.TB_MesSentarseDesdeAcostado.Location = new System.Drawing.Point(533, 278);
             this.TB_MesSentarseDesdeAcostado.Name = "TB_MesSentarseDesdeAcostado";
             this.TB_MesSentarseDesdeAcostado.Size = new System.Drawing.Size(65, 26);
-            this.TB_MesSentarseDesdeAcostado.TabIndex = 65;
+            this.TB_MesSentarseDesdeAcostado.TabIndex = 59;
             this.TB_MesSentarseDesdeAcostado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_MesSentarseDesdeAcostado_KeyPress);
             // 
             // TB_AñoSentarseDesdeAcostado
@@ -385,7 +385,7 @@
             this.TB_AñoSentarseDesdeAcostado.Location = new System.Drawing.Point(385, 278);
             this.TB_AñoSentarseDesdeAcostado.Name = "TB_AñoSentarseDesdeAcostado";
             this.TB_AñoSentarseDesdeAcostado.Size = new System.Drawing.Size(65, 26);
-            this.TB_AñoSentarseDesdeAcostado.TabIndex = 64;
+            this.TB_AñoSentarseDesdeAcostado.TabIndex = 58;
             this.TB_AñoSentarseDesdeAcostado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_AñoSentarseDesdeAcostado_KeyPress);
             // 
             // L_MesSentarseDesdeAcostado
@@ -414,7 +414,7 @@
             this.TB_MesSentarse.Location = new System.Drawing.Point(487, 234);
             this.TB_MesSentarse.Name = "TB_MesSentarse";
             this.TB_MesSentarse.Size = new System.Drawing.Size(65, 26);
-            this.TB_MesSentarse.TabIndex = 61;
+            this.TB_MesSentarse.TabIndex = 57;
             this.TB_MesSentarse.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_MesSentarse_KeyPress);
             // 
             // TB_AñoSentarse
@@ -423,7 +423,7 @@
             this.TB_AñoSentarse.Location = new System.Drawing.Point(339, 234);
             this.TB_AñoSentarse.Name = "TB_AñoSentarse";
             this.TB_AñoSentarse.Size = new System.Drawing.Size(65, 26);
-            this.TB_AñoSentarse.TabIndex = 60;
+            this.TB_AñoSentarse.TabIndex = 56;
             this.TB_AñoSentarse.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_AñoSentarse_KeyPress);
             // 
             // L_MesSentarse
@@ -452,7 +452,7 @@
             this.TB_MesEscalon.Location = new System.Drawing.Point(503, 451);
             this.TB_MesEscalon.Name = "TB_MesEscalon";
             this.TB_MesEscalon.Size = new System.Drawing.Size(65, 26);
-            this.TB_MesEscalon.TabIndex = 77;
+            this.TB_MesEscalon.TabIndex = 72;
             this.TB_MesEscalon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_MesEscalon_KeyPress);
             // 
             // TB_AñoEscalon
@@ -461,7 +461,7 @@
             this.TB_AñoEscalon.Location = new System.Drawing.Point(355, 451);
             this.TB_AñoEscalon.Name = "TB_AñoEscalon";
             this.TB_AñoEscalon.Size = new System.Drawing.Size(65, 26);
-            this.TB_AñoEscalon.TabIndex = 76;
+            this.TB_AñoEscalon.TabIndex = 71;
             this.TB_AñoEscalon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_AñoEscalon_KeyPress);
             // 
             // L_MesEscalon
@@ -490,7 +490,7 @@
             this.TB_MesMarcha.Location = new System.Drawing.Point(306, 409);
             this.TB_MesMarcha.Name = "TB_MesMarcha";
             this.TB_MesMarcha.Size = new System.Drawing.Size(65, 26);
-            this.TB_MesMarcha.TabIndex = 73;
+            this.TB_MesMarcha.TabIndex = 70;
             this.TB_MesMarcha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_MesMarcha_KeyPress);
             // 
             // TB_AñoMarcha
@@ -499,7 +499,7 @@
             this.TB_AñoMarcha.Location = new System.Drawing.Point(158, 409);
             this.TB_AñoMarcha.Name = "TB_AñoMarcha";
             this.TB_AñoMarcha.Size = new System.Drawing.Size(65, 26);
-            this.TB_AñoMarcha.TabIndex = 72;
+            this.TB_AñoMarcha.TabIndex = 69;
             this.TB_AñoMarcha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_AñoMarcha_KeyPress);
             // 
             // L_MesMarcha
@@ -538,7 +538,7 @@
             this.TB_MesBipedo.Location = new System.Drawing.Point(304, 366);
             this.TB_MesBipedo.Name = "TB_MesBipedo";
             this.TB_MesBipedo.Size = new System.Drawing.Size(65, 26);
-            this.TB_MesBipedo.TabIndex = 82;
+            this.TB_MesBipedo.TabIndex = 64;
             this.TB_MesBipedo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_MesBipedo_KeyPress);
             // 
             // TB_AñoBipedo
@@ -547,7 +547,7 @@
             this.TB_AñoBipedo.Location = new System.Drawing.Point(156, 366);
             this.TB_AñoBipedo.Name = "TB_AñoBipedo";
             this.TB_AñoBipedo.Size = new System.Drawing.Size(65, 26);
-            this.TB_AñoBipedo.TabIndex = 81;
+            this.TB_AñoBipedo.TabIndex = 63;
             this.TB_AñoBipedo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_AñoBipedo_KeyPress);
             // 
             // label1
@@ -576,7 +576,7 @@
             this.TB_MesCaja.Location = new System.Drawing.Point(512, 491);
             this.TB_MesCaja.Name = "TB_MesCaja";
             this.TB_MesCaja.Size = new System.Drawing.Size(65, 26);
-            this.TB_MesCaja.TabIndex = 87;
+            this.TB_MesCaja.TabIndex = 74;
             this.TB_MesCaja.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_MesCaja_KeyPress);
             // 
             // TB_AñoCaja
@@ -585,7 +585,7 @@
             this.TB_AñoCaja.Location = new System.Drawing.Point(364, 491);
             this.TB_AñoCaja.Name = "TB_AñoCaja";
             this.TB_AñoCaja.Size = new System.Drawing.Size(65, 26);
-            this.TB_AñoCaja.TabIndex = 86;
+            this.TB_AñoCaja.TabIndex = 73;
             this.TB_AñoCaja.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_AñoCaja_KeyPress);
             // 
             // L_MesCaja
@@ -620,7 +620,7 @@
             // 
             // B_Siguiente
             // 
-            this.B_Siguiente.FlatAppearance.BorderColor = System.Drawing.Color.MediumTurquoise;
+            this.B_Siguiente.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
             this.B_Siguiente.FlatAppearance.BorderSize = 0;
             this.B_Siguiente.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.B_Siguiente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -636,7 +636,7 @@
             // 
             // B_Salir
             // 
-            this.B_Salir.FlatAppearance.BorderColor = System.Drawing.Color.MediumTurquoise;
+            this.B_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
             this.B_Salir.FlatAppearance.BorderSize = 0;
             this.B_Salir.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.B_Salir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -652,7 +652,7 @@
             // 
             // B_Anterior
             // 
-            this.B_Anterior.FlatAppearance.BorderColor = System.Drawing.Color.MediumTurquoise;
+            this.B_Anterior.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
             this.B_Anterior.FlatAppearance.BorderSize = 0;
             this.B_Anterior.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.B_Anterior.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -670,7 +670,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.BackColor = System.Drawing.Color.Gold;
             this.ClientSize = new System.Drawing.Size(664, 631);
             this.ControlBox = false;
             this.Controls.Add(this.TB_MesCaja);
