@@ -16,5 +16,8 @@ namespace SGA_ConsultorioMedicoChuao.Vista.EntrevistaTerapiaDeLenguaje
         {
             InitializeComponent();
         }
+
+
+        
     }
 }
