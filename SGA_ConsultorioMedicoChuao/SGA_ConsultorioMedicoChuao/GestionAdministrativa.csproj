@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{638F7587-5AAA-4BF6-A9AC-BC0EB2BF5AE5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SGA_ConsultorioMedicoChuao</RootNamespace>
+    <AssemblyName>SGA_ConsultorioMedicoChuao</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.DebuggerVisualizers, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="mono.security, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Librerias\mono.security.dll</HintPath>
+    </Reference>
+    <Reference Include="npgsql, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Librerias\npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Utilitaria\ConexionBD.cs" />
+    <Compile Include="Utilitaria\Utilitaria.cs" />
+    <Compile Include="Vista\AgregarProductoInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\AgregarProductoInventario.Designer.cs">
+      <DependentUpon>AgregarProductoInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\AgregarProductoLista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\AgregarProductoLista.Designer.cs">
+      <DependentUpon>AgregarProductoLista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\ComposicionMensajes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ComposicionMensajes.Designer.cs">
+      <DependentUpon>ComposicionMensajes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\ComposicionRegistroListaEspera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ComposicionRegistroListaEspera.Designer.cs">
+      <DependentUpon>ComposicionRegistroListaEspera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\EntrevistaFisioTerapia\Actividades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\EntrevistaFisioTerapia\Actividades.Designer.cs">
+      <DependentUpon>Actividades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\EntrevistaFisioTerapia\AntecedentesFisio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\EntrevistaFisioTerapia\AntecedentesFisio.Designer.cs">
+      <DependentUpon>AntecedentesFisio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\EntrevistaTerapiaDeLenguaje\Antecedentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\EntrevistaTerapiaDeLenguaje\Antecedentes.Designer.cs">
+      <DependentUpon>Antecedentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\EntrevistaTerapiaDeLenguaje\Audicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\EntrevistaTerapiaDeLenguaje\Audicion.Designer.cs">
+      <DependentUpon>Audicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\EntrevistaTerapiaDeLenguaje\ComprensionDelLenguaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\EntrevistaTerapiaDeLenguaje\ComprensionDelLenguaje.Designer.cs">
+      <DependentUpon>ComprensionDelLenguaje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\EntrevistaTerapiaDeLenguaje\Respiracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\EntrevistaTerapiaDeLenguaje\Respiracion.Designer.cs">
+      <DependentUpon>Respiracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\PrincipalListaEspera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\PrincipalListaEspera.Designer.cs">
+      <DependentUpon>PrincipalListaEspera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\ElegirTerapeuta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ElegirTerapeuta.Designer.cs">
+      <DependentUpon>ElegirTerapeuta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\EntrevistaFisioTerapia\DatosPersonalesFisio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\EntrevistaFisioTerapia\DatosPersonalesFisio.Designer.cs">
+      <DependentUpon>DatosPersonalesFisio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\EntrevistaFisioTerapia\Hitos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\EntrevistaFisioTerapia\Hitos.Designer.cs">
+      <DependentUpon>Hitos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\EntrevistaFisioTerapia\ReferenciaEntrevista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\EntrevistaFisioTerapia\ReferenciaEntrevista.Designer.cs">
+      <DependentUpon>ReferenciaEntrevista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\EntrevistaTerapiaDeLenguaje\DatosPersonales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\EntrevistaTerapiaDeLenguaje\DatosPersonales.Designer.cs">
+      <DependentUpon>DatosPersonales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\ModificarProductoInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ModificarProductoInventario.Designer.cs">
+      <DependentUpon>ModificarProductoInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\PrincipalInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\PrincipalInventario.Designer.cs">
+      <DependentUpon>PrincipalInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\PrincipalHorarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\PrincipalHorarios.Designer.cs">
+      <DependentUpon>PrincipalHorarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\PrincipalMensajes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\PrincipalMensajes.Designer.cs">
+      <DependentUpon>PrincipalMensajes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\ReduccionProductoInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ReduccionProductoInventario.Designer.cs">
+      <DependentUpon>ReduccionProductoInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\TipoEliminacionProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\TipoEliminacionProducto.Designer.cs">
+      <DependentUpon>TipoEliminacionProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\VentanaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\VentanaPrincipal.Designer.cs">
+      <DependentUpon>VentanaPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vista\VistaMensajes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\VistaMensajes.Designer.cs">
+      <DependentUpon>VistaMensajes.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Vista\AgregarProductoInventario.resx">
+      <DependentUpon>AgregarProductoInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\AgregarProductoLista.resx">
+      <DependentUpon>AgregarProductoLista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ComposicionMensajes.resx">
+      <DependentUpon>ComposicionMensajes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ComposicionRegistroListaEspera.resx">
+      <DependentUpon>ComposicionRegistroListaEspera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\EntrevistaFisioTerapia\Actividades.resx">
+      <DependentUpon>Actividades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\EntrevistaFisioTerapia\AntecedentesFisio.resx">
+      <DependentUpon>AntecedentesFisio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\EntrevistaTerapiaDeLenguaje\Antecedentes.resx">
+      <DependentUpon>Antecedentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\EntrevistaTerapiaDeLenguaje\Audicion.resx">
+      <DependentUpon>Audicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\EntrevistaTerapiaDeLenguaje\ComprensionDelLenguaje.resx">
+      <DependentUpon>ComprensionDelLenguaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\EntrevistaTerapiaDeLenguaje\Respiracion.resx">
+      <DependentUpon>Respiracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\PrincipalListaEspera.resx">
+      <DependentUpon>PrincipalListaEspera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ElegirTerapeuta.resx">
+      <DependentUpon>ElegirTerapeuta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\EntrevistaFisioTerapia\DatosPersonalesFisio.resx">
+      <DependentUpon>DatosPersonalesFisio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\EntrevistaFisioTerapia\Hitos.resx">
+      <DependentUpon>Hitos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\EntrevistaFisioTerapia\ReferenciaEntrevista.resx">
+      <DependentUpon>ReferenciaEntrevista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\EntrevistaTerapiaDeLenguaje\DatosPersonales.resx">
+      <DependentUpon>DatosPersonales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ModificarProductoInventario.resx">
+      <DependentUpon>ModificarProductoInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\PrincipalInventario.resx">
+      <DependentUpon>PrincipalInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\PrincipalHorarios.resx">
+      <DependentUpon>PrincipalHorarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\PrincipalMensajes.resx">
+      <DependentUpon>PrincipalMensajes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ReduccionProductoInventario.resx">
+      <DependentUpon>ReduccionProductoInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\TipoEliminacionProducto.resx">
+      <DependentUpon>TipoEliminacionProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\VentanaPrincipal.resx">
+      <DependentUpon>VentanaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\VistaMensajes.resx">
+      <DependentUpon>VistaMensajes.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SalirSistema.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inventario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BusquedaPaciente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quitar.png" />
+    <None Include="Resources\NuevoListaEspera.png" />
+    <None Include="Resources\Modificar.png" />
+    <None Include="Resources\MensajeNuevo.png" />
+    <None Include="Resources\Pagos.png" />
+    <None Include="Resources\Mensajes.png" />
+    <None Include="Resources\Horario.png" />
+    <None Include="Resources\Aceptar.png" />
+    <None Include="Resources\Cancelar.png" />
+    <None Include="Resources\Guardar.png" />
+    <None Include="Resources\Borrar.png" />
+    <None Include="Resources\Agregar.png" />
+    <None Include="Resources\flechaAnterior.png" />
+    <Content Include="Resources\Inscripcion.png" />
+    <None Include="Resources\ListaEspera.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
