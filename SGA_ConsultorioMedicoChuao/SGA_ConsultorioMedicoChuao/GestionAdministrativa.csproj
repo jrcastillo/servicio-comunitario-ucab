@@ -97,6 +97,18 @@
     <Compile Include="Vista\EntrevistaTerapiaDeLenguaje\Antecedentes.Designer.cs">
       <DependentUpon>Antecedentes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\EntrevistaTerapiaDeLenguaje\Audicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\EntrevistaTerapiaDeLenguaje\Audicion.Designer.cs">
+      <DependentUpon>Audicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\EntrevistaTerapiaDeLenguaje\ComprensionDelLenguaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\EntrevistaTerapiaDeLenguaje\ComprensionDelLenguaje.Designer.cs">
+      <DependentUpon>ComprensionDelLenguaje.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\EntrevistaTerapiaDeLenguaje\Respiracion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +231,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\EntrevistaTerapiaDeLenguaje\Antecedentes.resx">
       <DependentUpon>Antecedentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\EntrevistaTerapiaDeLenguaje\Audicion.resx">
+      <DependentUpon>Audicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\EntrevistaTerapiaDeLenguaje\ComprensionDelLenguaje.resx">
+      <DependentUpon>ComprensionDelLenguaje.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\EntrevistaTerapiaDeLenguaje\Respiracion.resx">
       <DependentUpon>Respiracion.cs</DependentUpon>
