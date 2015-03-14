@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SGA_ConsultorioMedicoChuao.Vista;
 
 namespace SGA_ConsultorioMedicoChuao.Vista.EntrevistaFisioTerapia
 {
@@ -32,7 +33,7 @@ namespace SGA_ConsultorioMedicoChuao.Vista.EntrevistaFisioTerapia
         private void B_Anterior_Click(object sender, EventArgs e)
         {
             llenaDatosHitos();
-            SGA_ConsultorioMedicoChuao.Vista.EntrevistaFisioTerapia.ReferenciaEntrevista nuevaVentana = new SGA_ConsultorioMedicoChuao.Vista.EntrevistaFisioTerapia.ReferenciaEntrevista();
+            EntrevistaFisioTerapia.ReferenciaEntrevista nuevaVentana = new EntrevistaFisioTerapia.ReferenciaEntrevista();
             nuevaVentana.Show();
             this.Close();
         }
@@ -40,8 +41,8 @@ namespace SGA_ConsultorioMedicoChuao.Vista.EntrevistaFisioTerapia
         private void B_Siguiente_Click(object sender, EventArgs e)
         {
             llenaDatosHitos();
-            SGA_ConsultorioMedicoChuao.Vista.EntrevistaFisioTerapia.Actividades nuevaVentana = new SGA_ConsultorioMedicoChuao.Vista.EntrevistaFisioTerapia.Actividades();
-            nuevaVentana.Show();
+            //EntrevistaFisioTerapia.Actividades nuevaVentana = new EntrevistaFisioTerapia.Actividades();
+            //nuevaVentana.Show();
             this.Close();      
         }
 

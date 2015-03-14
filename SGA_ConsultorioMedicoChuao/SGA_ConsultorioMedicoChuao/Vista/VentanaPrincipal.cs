@@ -79,11 +79,12 @@ namespace SGA_ConsultorioMedicoChuao
         }
 
 		private void B_Horarios_Click(object sender, EventArgs e)
-		{ 
+		{
+			Utilitaria.Utilitaria.ventanaPrincipal = this;
 			Utilitaria.Utilitaria.agregarValorIdentificadorOpcion(8);
 			PrincipalHorarios nuevaVentana = new PrincipalHorarios();
 			nuevaVentana.Show();
-			this.Hide();
+			Utilitaria.Utilitaria.ventanaPrincipal.Hide();
 		}
 
     }

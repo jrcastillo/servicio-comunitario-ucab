@@ -3,19 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Npgsql;
 
 namespace SGA_ConsultorioMedicoChuao.Utilitaria
 {
     static class Utilitaria
     {
+		public static Form ventanaPrincipal = new Form();
+
         public static List<string> listaDatosPacienteFisio = new List<string>();
         public static List<string> listaDatosPacienteLenguaje = new List<string>();
         public static List<string> listaDatosMama = new List<string>();
         public static List<string> listaDatosPapa = new List<string>();
         public static List<string> listaReferenciaEntrevista = new List<string>();
-        public static List<String> listahitos = new List<string>();
-        public static List<String> listaActividades = new List<string>();
+		public static List<String> listahitos = new List<string>();
+		public static List<String> listaActividades = new List<string>();
         public static List<String> listaAntecedentes = new List<string>();
         public static string nombreProductoSeleccionado = "";
         public static int identificadorOpcion = 0;
@@ -261,5 +264,68 @@ namespace SGA_ConsultorioMedicoChuao.Utilitaria
             return nombreDia;
         }
 
-    }
+
+		public static string buscarCitaPacientes(string idTerapeuta)
+		{
+			return "SELECT h.id, p.id, tp.id, h.fechacita, p.nombre ||','|| p.apellido, padre.nombresp, madre.nombrem " +
+					"FROM \"Horario\" h, \"Paciente_Terapeuta\" tp, \"Paciente\" p, " +
+						"(SELECT rp.nombre ||','|| rp.apellido as nombresp, rp.fk_hijo as fk_hijop " +
+						"FROM \"Representante\" rp " +
+						"WHERE tipo = 'PADRE') padre, " +
+						"(SELECT rm.nombre ||','|| rm.apellido as nombrem, rm.fk_hijo as fk_hijom " +
+						"FROM \"Representante\" rm " +
+						"WHERE tipo = 'MADRE') madre " +
+					"WHERE tp.fk_terapeuta = "+ idTerapeuta + " AND tp.fk_horario <> 0" +
+						" AND h.id = tp.fk_horario " +
+						"AND p.id = tp.fk_paciente " +
+						"AND (	" +
+								"(padre.fk_hijop = p.id AND (select count(rpp.*) " +
+															"from \"Representante\" rpp " +
+															"where rpp.fk_hijo = p.id " +
+															"AND rpp.tipo = 'PADRE') > 0 " +
+								"AND madre.fk_hijom = p.id AND (select count(rmm.*)  " +
+														"from \"Representante\" rmm " +
+														"where rmm.fk_hijo = p.id " +
+														"AND rmm.tipo = 'MADRE') > 0) " +
+							")";
+		}
+
+		public static string buscarPacientes(string idTerapeuta)
+		{
+			return "SELECT DISTINCT (p.id), (p.nombre ||', '|| p.apellido) nombre FROM \"Paciente\" p, \"Paciente_Terapeuta\" tp WHERE p.id = tp.fk_paciente AND tp.fk_terapeuta = " + idTerapeuta + " AND tp.fk_horario = 0 ";
+		}
+
+		public static string AgregarCitaHoraio(int idPaciente, int idTerapeuta, int idHorario)
+		{
+			return "INSERT INTO \"Paciente_Terapeuta\" (fk_paciente,fk_terapeuta,fk_horario) VALUES ("+idPaciente+","+idTerapeuta+","+idHorario+")";
+		}
+
+		public static string AgregarHorarioNuevo(string fecha)
+		{
+			return "INSERT INTO \"Horario\"(fechacita) VALUES (to_timestamp('" + fecha + "','dd-MON-yy HH24:min'))";
+		}
+
+		public static string buscarHoraExistente(string fecha)
+		{
+			return "SELECT id, fechacita FROM \"Horario\" WHERE fechacita = to_timestamp('"+fecha+"','dd-MON-yy HH24:min')";
+		}
+
+		public static string ModificarCitaHorario(int paciente, int terapeuta, string fechaNueva, string fechaVieja)
+		{
+			return "UPDATE \"Horario\""+
+					"SET fechacita= to_timestamp('" + fechaNueva + "','dd-MON-yy HH24:min') " +
+					"WHERE id= " +
+								"(SELECT hh.id "+
+								"FROM \"Horario\" hh, \"Paciente_Terapeuta\" pt "+
+								"WHERE hh.id = pt.fk_horario "+
+								"AND pt.fk_terapeuta = " + terapeuta + " "+
+								"AND pt.fk_paciente = " + paciente + " "+
+								"AND hh.fechacita = to_timestamp('" + fechaVieja + "','dd-MON-yy HH24:min')) ";
+		}
+
+		internal static string EliminarCitaHorario(string idPacTerHor)
+		{
+			return "DELETE FROM \"Paciente_Terapeuta\" WHERE id = "+ idPacTerHor;
+		}
+	}
 }
